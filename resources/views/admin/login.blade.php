@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Password Reset - SB Admin</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <title>Login - SB Admin</title>
+    <link href="/assets/admin/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-primary">
@@ -18,22 +18,30 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Password Recovery</h3></div>
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Acessar</h3></div>
                             <div class="card-body">
-                                <div class="small mb-3 text-muted">Enter your email address and we will send you a link to reset your password.</div>
                                 <form>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                        <label for="inputEmail">Email address</label>
+                                        <input class="form-control" id="inputEmail" type="email" placeholder="nome@exemplo.com" />
+                                        <label for="inputEmail">Email</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="inputPassword" type="password" placeholder="Senha" />
+                                        <label for="inputPassword">Senha</label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                        <label class="form-check-label" for="inputRememberPassword">Lembrar-me da Senha</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" href="login.html">Return to login</a>
-                                        <a class="btn btn-primary" href="login.html">Reset Password</a>
+                                        <a class="small" href="{{route('admin.password')}}">Esqueceu a Senha?</a>
+                                        <a class="btn btn-primary" href="/">Entrar</a>
                                     </div>
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                                <a class="btn btn-secondary" href="{{route('admin.register')}}">Cadastre-se</a>
+                               <!-- <div class="small"><a href="register.html">Cadastre-se</a></div> -->
                             </div>
                         </div>
                     </div>
@@ -47,9 +55,9 @@
                 <div class="d-flex align-items-center justify-content-between small">
                     <div class="text-muted">Copyright &copy; Your Website 2022</div>
                     <div>
-                        <a href="#">Privacy Policy</a>
+                        <a href="#">Política de Privacidade</a>
                         &middot;
-                        <a href="#">Terms &amp; Conditions</a>
+                        <a href="#">Termos &amp; Condições de Uso</a>
                     </div>
                 </div>
             </div>
@@ -57,6 +65,6 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
+<script src="/assets/admin/js/scripts.js"></script>
 </body>
 </html>
