@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Password Reset - SB Admin</title>
-    <link href="/assets/admin/css/styles.css" rel="stylesheet" />
+    <link href="/assets/user/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-primary">
@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                     <!--    <a class="small" href="login.html">Retornar a Tela de Login</a> -->
-                                        <a class="btn btn-primary" href="{{route('admin.login')}}">Redefinir Senha</a>
+                                        <a class="btn btn-primary" href="{{route('user.login')}}">Redefinir Senha</a>
                                     </div>
                                 </form>
                             </div>
@@ -59,6 +59,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/admin/js/scripts.js"></script>
+    <script src="/assets/user/js/scripts.js"></script>
     </body>
     </html>

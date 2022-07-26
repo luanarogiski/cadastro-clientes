@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('home.index');
 
+Route::any('/user', [UserController::class, 'user'])->name('user');
+Route::any('/user/login', [UserController::class, 'login'])->name('user.login');
+Route::any('/user/register', [UserController::class, 'register'])->name('user.register');
+Route::any('/user/password', [UserController::class, 'password'])->name('user.password');
+Route::any('/user/tables', [UserController::class, 'tables'])->name('user.tables');
 
-Route::any('/admin/login', [AdminController::class, 'login'])->name('admin.login');
-Route::any('/admin/register', [AdminController::class, 'register'])->name('admin.register');
-Route::any('/admin/password', [AdminController::class, 'password'])->name('admin.password');
+Route::any('/editar', [ClientController::class, 'editar'])->name('acoes.editar');
+Route::any('/adicionar', [ClientController::class, 'adicionar'])->name('acoes.adicionar');
