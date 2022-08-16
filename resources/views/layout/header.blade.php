@@ -15,7 +15,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
 
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
 
+
+    <script src="{{"/assets/user/js/jquery/jquery.min.js"}}"></script>
+    <script src="{{"/assets/user/js/jquery/jquery.easing.min.js"}}"></script>
+    <script src="{{"/assets/user/js/jquery/bootstrap.bundle.min.js"}}"></script>
+    <script>
+        var csrf_token = "{{ csrf_token() }}";
+    </script>
 </head>
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">

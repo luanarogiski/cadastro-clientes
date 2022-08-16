@@ -17,13 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Controller::class, 'index'])->name('home.index');
-
-Route::any('/user', [UserController::class, 'user'])->name('user');
-Route::any('/user/login', [UserController::class, 'login'])->name('user.login');
+Route::get('/home', [UserController::class, 'index'])->name('home.index');
+Route::get('/', [Controller::class, 'acessar'])->name('user.login');
+Route::get('/login', [Controller::class, 'login'])->name('user.login');
+//Route::any('/user', [UserController::class, 'user'])->name('user.login');
+//Route::any('/user/login', [UserController::class, 'login'])->name('user.login');
 Route::any('/user/register', [UserController::class, 'register'])->name('user.register');
 Route::any('/user/password', [UserController::class, 'password'])->name('user.password');
-Route::any('/user/tables', [UserController::class, 'tables'])->name('user.tables');
+Route::any('/client/clientes', [UserController::class, 'clientes'])->name('client.clientes');
 
-Route::any('/editar', [ClientController::class, 'editar'])->name('acoes.editar');
+Route::any('/listar', [ClientController::class, 'listar'])->name('acoes.listar');
+Route::any('/editar/{id}', [ClientController::class, 'editar'])->name('acoes.editar');
 Route::any('/adicionar', [ClientController::class, 'adicionar'])->name('acoes.adicionar');
+Route::any('/visualizar/{id}', [ClientController::class, 'visualizar'])->name('acoes.visualizar');

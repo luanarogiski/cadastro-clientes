@@ -1,9 +1,6 @@
 
-<script src="{{"/assets/user/js/jquery/jquery.min.js"}}"></script>
-<script src="{{"/assets/user/js/jquery/jquery.easing.min.js"}}"></script>
-<script src="{{"/assets/user/js/jquery/bootstrap.bundle.min.js"}}"></script>
 
-    <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -13,12 +10,16 @@
                 <div class="modal-body">
                     <form id="formEditar">
                         <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" name="id" value="{{ $id }}" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label>Nome</label>
                             <input type="text" name="nome" class="form-control" placeholder="Nome">
                         </div>
                         <div class="form-group">
                             <label>Data de Nascimento</label>
-                            <input type="date" name="data" class="form-control" placeholder="Data de Nascimento">
+                            <input type="date" name="dataNascimento" class="form-control" placeholder="Data de Nascimento">
                         </div>
                         <div class="form-group">
                             <label>CPF</label>
@@ -42,12 +43,15 @@
                         </div>
                         <div class="form-group">
                             <label>Data do Cadastro</label>
-                            <input type="date" name="cadastro" class="form-control" placeholder="Data do Cadastro">
+                            <input type="date" name="dataCadastro" class="form-control" placeholder="Data do Cadastro">
                         </div>
                         <div class="form-group">
                             <label>Data da Compra</label>
                             <input type="date" name="compra" class="form-control" placeholder="Data da Compra">
                         </div>
+                        <input type="hidden" name="acao">
+                        <input type="hidden" name="id">
+                        @csrf
                     </form>
                 </div>
                 <div class="modal-footer">

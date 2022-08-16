@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function login()
+
+    public function index()
     {
-        return view('user.login');
+        return view('home.index');
     }
 
     public function register()
@@ -21,8 +22,9 @@ class UserController extends Controller
         return view('user.password');
     }
 
-    public function tables()
+    public function clientes()
     {
-        return view('user.tables');
+
+        return view('client.clientes');
     }
 }

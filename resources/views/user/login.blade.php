@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="{{route('user.password')}}">Esqueceu a Senha?</a>
-                                        <a class="btn btn-primary" href="/">Entrar</a>
+                                        <a class="btn btn-primary" href="/home">Entrar</a>
                                     </div>
                                 </form>
                             </div>

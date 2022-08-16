@@ -1,6 +1,12 @@
 
 
 .adicionar {
+    display: flex;
     padding-left: 79%;
-    margin-top: 50px;
+    padding-bottom: 12px;
+    justify-content: space-between;
+    align-content: space-around;
 }
+
+
+

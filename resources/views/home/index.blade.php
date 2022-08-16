@@ -1,5 +1,8 @@
 @include('layout.header')
 
-@include('layout.sidebar')
+@include('client.clientes')
+
+
+@include('client.sidenavTables')
 
 @include('layout.footer')
