@@ -262,7 +262,7 @@
                                 <td>2012/12/18</td>
                                 <td>2022/02/11</td>
                                 <td>
-                                    <a title="Detalhes" href=""><i class="fas fa-eye text-primary mr-1"></i></a>
+                                    <a title="Visualizar" href=""><i class="fas fa-eye text-primary mr-1"></i></a>
                                     <a title="Editar" href=""><i class="fas fa-edit text-info mr-1"></i></a>
                                     <a title="Deletar" href=""><i class="fas fa-trash text-danger mr-1"></i></a>
                                 </td>

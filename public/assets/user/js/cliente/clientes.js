@@ -1,7 +1,7 @@
     $(document).ready(function() {
         datatable = $('#dataTable').DataTable({
             ajax: {
-                url: '/client/clientes',
+                url: '/client/listar',
                 type: 'POST',
                 data: {
                     acao: 'listar',
@@ -11,7 +11,7 @@
             },
 
             columns: [
-                {data: 'id', width:'5%', visible:false},
+                {data: 'id', visible:false},
                 {data: 'nome', width: '10%'},
                 {data: 'dataNascimento', width: '10%'},
                 {data: 'cpf', width: '10%'},
@@ -23,6 +23,24 @@
                 {data: 'dataCompra', width: '10%'},
                 {data: 'acoes', width: '10%'},
             ],
+
+            columnDefs: [{
+                targets: -1, // ultima coluna
+                orderable: false, // nao é ordenavel
+                render: function (data, type, clientes, meta) { // definir a forma de renderizacao
+                    return `\
+                            <a href="/client/listar" target="_blank" class="btn btn-sm mr-1" title="Visualizar" data-id="${clientes.id}">\
+                              <i class="fas fa-eye text-primary"></i>\
+                            </a>\
+                            <a href="#" class="btn btn-sm mr-1" onclick="editar(${meta.row})" title="Editar" data-id="${clientes.id}">\
+                            \<i class="fas fa-edit text-info"></i>\
+                            </a>\
+                            \<a href="#" class="btn btn-sm mr-1" onclick="deletar(${clientes.id})"\
+                                title="Deletar" data-id="${clientes.id}">\
+                                <i class="fas fa-trash text-danger"></i>\
+                    `;
+                },
+            }],
 
             serverSide: true,
             processing: true,

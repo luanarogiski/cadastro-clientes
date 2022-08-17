@@ -24,9 +24,9 @@ Route::get('/login', [Controller::class, 'login'])->name('user.login');
 //Route::any('/user/login', [UserController::class, 'login'])->name('user.login');
 Route::any('/user/register', [UserController::class, 'register'])->name('user.register');
 Route::any('/user/password', [UserController::class, 'password'])->name('user.password');
-Route::any('/client/clientes', [UserController::class, 'clientes'])->name('client.clientes');
+Route::any('/client/clientes', [ClientController::class, 'clientes'])->name('client.clientes');
 
-Route::any('/listar', [ClientController::class, 'listar'])->name('acoes.listar');
-Route::any('/editar/{id}', [ClientController::class, 'editar'])->name('acoes.editar');
-Route::any('/adicionar', [ClientController::class, 'adicionar'])->name('acoes.adicionar');
-Route::any('/visualizar/{id}', [ClientController::class, 'visualizar'])->name('acoes.visualizar');
+Route::any('/client/listar', [ClientController::class, 'listar'])->name('client.listar');
+Route::any('/client/editar/{id}', [ClientController::class, 'editar'])->name('client.editar');
+Route::any('/client/adicionar', [ClientController::class, 'adicionar'])->name('client.adicionar');
+Route::any('/client/visualizar/{id}', [ClientController::class, 'visualizar'])->name('client.visualizar');

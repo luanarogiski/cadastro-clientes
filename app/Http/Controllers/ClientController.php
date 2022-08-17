@@ -10,16 +10,15 @@
         public function index(Request $request)
         {
             if ($request->isMethod(Request::METHOD_POST)) {
-                // retorna a listagem em json
-                return;
+                Clientes::paginar($request);
             }
 
-            return view();
+            return view('client.index');
         }
 
-        public function listar()
+        public function listar(Request $request)
         {
-
+            Clientes::paginar($request);
         }
 
         public function editar($id, $request)
@@ -58,7 +57,7 @@
 
                 //return;
                 echo json_encode(['mensagem' => 'Cliente cadastrado com sucesso']);
-            }
+            } return $cliente;
         }
 
 
