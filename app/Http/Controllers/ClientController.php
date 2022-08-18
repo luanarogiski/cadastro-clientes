@@ -21,20 +21,27 @@
             Clientes::paginar($request);
         }
 
-        public function editar($id, $request)
+        public function editar(Request $request, $id)
         {
             //editar
-            $cliente = Clientes::where('id', $request->input('id'))->first();
-            $cliente->nome = $request->input('nome');
-            $cliente->dataNascimento = $request->input('dataNascimento');
-            $cliente->cpf = $request->input('cpf');
-            $cliente->profissao = $request->input('profissao');
-            $cliente->telefone = $request->input('telefone');
-            $cliente->cidade = $request->input('cidade');
-            $cliente->endereco = $request->input('endereco');
-            $cliente->dataCadastro = $request->input('dataCadastro');
-            $cliente->dataCompra = $request->input('dataCompra');
-            $cliente->save();
+            if ($request->isMethod('POST')) {
+                $cliente = Clientes::where('id', $request->input('id'))->first();
+                $cliente->nome = $request->input('nome');
+                $cliente->dataNascimento = $request->input('dataNascimento');
+                $cliente->cpf = $request->input('cpf');
+                $cliente->profissao = $request->input('profissao');
+                $cliente->telefone = $request->input('telefone');
+                $cliente->cidade = $request->input('cidade');
+                $cliente->endereco = $request->input('endereco');
+                $cliente->dataCadastro = $request->input('dataCadastro');
+                $cliente->dataCompra = $request->input('dataCompra');
+                $cliente->save();
+                return;
+            }
+
+            $cliente = Clientes::where('id', $id)->first();
+
+            return view('client.editar', ['cliente' => $cliente]);
            // return view('acoes.editar', [
            //     'id' => $id ]);
         }
@@ -55,9 +62,11 @@
                 $cliente->dataCompra = $request->input('dataCompra');
                 $cliente->save();
 
-                //return;
                 echo json_encode(['mensagem' => 'Cliente cadastrado com sucesso']);
-            } return $cliente;
+                return;
+            }
+
+            return view('client.adicionar');
         }
 
 

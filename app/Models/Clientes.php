@@ -20,4 +20,6 @@ class Clientes extends Model
         'dataCadastro',
         'dataCompra'
     ];
+
+
 }

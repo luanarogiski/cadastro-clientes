@@ -57,7 +57,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" id="btnCancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <!--    <button type="button" id="btnSalvar" class="btn btn-primary">Salvar</button> -->
+                <button type="button" id="btnSalvar" class="btn btn-primary">Salvar</button>
             </div>
         </div>
     </div>

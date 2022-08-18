@@ -1,17 +1,16 @@
 
-
-<div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalEditarTitle">Editar</h5>
+                    <h5 class="modal-title" id="modalAdicionarTitle">Adicionar</h5>
                     <a href="#" id="btnFechar" class="text-secondary" data-bs-dismiss="modal"> <span class="material-symbols-outlined">close</span></a>
                 </div>
                 <div class="modal-body">
-                    <form id="formEditar">
+                    <form id="formAdicionar">
                         <div class="form-group">
                             <label>ID</label>
-                            <input type="text" name="id" value="{{ $id }}" class="form-control">
+                            <input type="text" name="id" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Nome</label>
@@ -47,7 +46,7 @@
                         </div>
                         <div class="form-group">
                             <label>Data da Compra</label>
-                            <input type="date" name="compra" class="form-control" placeholder="Data da Compra">
+                            <input type="date" name="dataCompra" class="form-control" placeholder="Data da Compra">
                         </div>
                         <input type="hidden" name="acao">
                         <input type="hidden" name="id">
@@ -61,5 +60,3 @@
             </div>
         </div>
     </div>
-
-
