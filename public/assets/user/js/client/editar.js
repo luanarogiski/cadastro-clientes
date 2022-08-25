@@ -35,4 +35,6 @@
             });
             modalEditar.hide();
         });
+        modalEditar = new bootstrap.Modal(document.getElementById('modalEditar'), {});
+        modalEditar.toggle();
     }

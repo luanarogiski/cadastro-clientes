@@ -24,7 +24,7 @@ class CreateClientesTable extends Migration
             $table->string('endereco');
             $table->date('dataCadastro');
             $table->date('dataCompra');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

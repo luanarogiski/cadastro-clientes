@@ -1,5 +1,6 @@
 
-    $(document).ready(function () {
+
+$(document).ready(function () {
         datatable = $('#dataTable').DataTable({
             ajax: {
                 url: '/client/listar',
@@ -30,7 +31,7 @@
                 orderable: false, // nao é ordenavel
                 render: function (data, type, cliente, meta) { // definir a forma de renderizacao
                     return `\
-                                        <a href="#" target="_blank" class="btn btn-sm mr-1" title="Visualizar" data-id="${cliente.id}">\
+                                        <a href="#" class="btn btn-sm mr-1" onclick="visualizar(${cliente.id})" title="Visualizar" data-id="${cliente.id}">\
                                           <i class="fas fa-eye text-primary"></i>\
                                         </a>\
                                         <a href="#" class="btn btn-sm mr-1" onclick="editar(${cliente.id})" title="Editar" data-id="${cliente.id}">\

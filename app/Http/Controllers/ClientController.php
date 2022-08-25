@@ -42,8 +42,6 @@
             $cliente = Clientes::where('id', $id)->first();
 
             return view('client.editar', ['cliente' => $cliente]);
-           // return view('acoes.editar', [
-           //     'id' => $id ]);
         }
 
         public function adicionar(Request $request)
@@ -70,10 +68,25 @@
         }
 
 
-        public function visualizar($id)
+        public function visualizar(Request $request, $id)
         {
+            if ($request->isMethod('POST')) {
+                $cliente = Clientes::where('id', $request->input('id'))->first();
+                $cliente->nome = $request->input('nome');
+                $cliente->dataNascimento = $request->input('dataNascimento');
+                $cliente->cpf = $request->input('cpf');
+                $cliente->profissao = $request->input('profissao');
+                $cliente->telefone = $request->input('telefone');
+                $cliente->cidade = $request->input('cidade');
+                $cliente->endereco = $request->input('endereco');
+                $cliente->dataCadastro = $request->input('dataCadastro');
+                $cliente->dataCompra = $request->input('dataCompra');
+                $cliente->save();
+                return;
+            }
 
-           // return view('acoes.visualizar', [
-           //     'id' => $id ]);
+            $cliente = Clientes::where('id', $id)->first();
+
+            return view('client.visualizar', ['cliente' => $cliente]);
         }
     }
