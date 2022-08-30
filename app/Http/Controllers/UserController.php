@@ -22,9 +22,9 @@ class UserController extends Controller
         return view('user.login');
     }
 
-    public function password()
+    public function redefinirSenha()
     {
-        return view('user.password');
+        return view('user.redefinirSenha');
     }
 
     public function clientes()

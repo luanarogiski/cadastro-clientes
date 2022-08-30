@@ -42,10 +42,10 @@
                 </div>
             </div>
         </main>
-        <script src="{{"/assets/user/js/client/index.js"}}"></script>
-        <script src="{{"/assets/user/js/client/adicionar.js"}}"></script>
-        <script src="{{"/assets/user/js/client/editar.js"}}"></script>
-        <script src="{{"/assets/user/js/client/visualizar.js"}}"></script>
+        <script src="{{"/assets/js/client/index.js"}}"></script>
+        <script src="{{"/assets/js/client/adicionar.js"}}"></script>
+        <script src="{{"/assets/js/client/editar.js"}}"></script>
+        <script src="{{"/assets/js/client/visualizar.js"}}"></script>
 
 
 

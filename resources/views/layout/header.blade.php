@@ -8,8 +8,8 @@
     <meta name="author" content="" />
     <title>Cadastrar Clientes</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="/assets/user/css/styles.css" rel="stylesheet" />
-    <link href="/assets/user/css/custom.css" rel="stylesheet" />
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/custom.css" rel="stylesheet" />
     <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet"></link>
 
     <link href="https://fontawesome.com/icons/arrow-right-from-bracket?s=solid" rel="stylesheet" />
@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
 
 
-    <script src="{{"/assets/user/js/jquery/jquery.min.js"}}"></script>
-    <script src="{{"/assets/user/js/jquery/jquery.easing.min.js"}}"></script>
-    <script src="{{"/assets/user/js/jquery/bootstrap.bundle.min.js"}}"></script>
+    <script src="{{"/assets/js/jquery/jquery.min.js"}}"></script>
+    <script src="{{"/assets/js/jquery/jquery.easing.min.js"}}"></script>
+    <script src="{{"/assets/js/jquery/bootstrap.bundle.min.js"}}"></script>
     <script>
         var csrf_token = "{{ csrf_token() }}";
     </script>
