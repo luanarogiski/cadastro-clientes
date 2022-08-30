@@ -17,7 +17,7 @@
         $('#btnSalvar').unbind('click').click(function () {
             $.ajax({
                 type: 'POST',
-                url: '/client/editar',
+                url: '/client/editar/' + document.querySelector('#formEditar input[name=id]').value,
                 data: new FormData(document.querySelector('#formEditar')),
                 processData: false,
                 contentType: false,
@@ -27,14 +27,12 @@
 
                     // Apos salvar recarregar o Grid
                     datatable.draw();
-                    $('#modalEditar').load('/client/editar #modalEditar > div');
+
                 },
                 error: function (request, status, error) {
                     alert(request.responseText);
                 }
             });
-            modalEditar.hide();
+            $('#modalEditar').modal('hide');
         });
-        modalEditar = new bootstrap.Modal(document.getElementById('modalEditar'), {});
-        modalEditar.toggle();
     }

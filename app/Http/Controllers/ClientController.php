@@ -26,6 +26,7 @@
             //editar
             if ($request->isMethod('POST')) {
                 $cliente = Clientes::where('id', $request->input('id'))->first();
+
                 $cliente->nome = $request->input('nome');
                 $cliente->dataNascimento = $request->input('dataNascimento');
                 $cliente->cpf = $request->input('cpf');
@@ -36,7 +37,7 @@
                 $cliente->dataCadastro = $request->input('dataCadastro');
                 $cliente->dataCompra = $request->input('dataCompra');
                 $cliente->save();
-                return;
+                return('Cliente alterado com sucesso');
             }
 
             $cliente = Clientes::where('id', $id)->first();

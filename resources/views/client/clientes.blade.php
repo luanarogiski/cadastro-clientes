@@ -48,6 +48,7 @@
         <script src="{{"/assets/user/js/client/visualizar.js"}}"></script>
 
 
+
     @include('layout.footer')
 
 

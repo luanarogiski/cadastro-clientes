@@ -18,8 +18,5 @@ class Controller extends BaseController
         return view('user.login');
     }
 
-    public function login()
-    {
-        return view('user.login');
-    }
+
 }

@@ -49,7 +49,6 @@
                                 <input type="date" name="dataCompra" value="{{ $cliente->dataCompra }}" class="form-control" placeholder="Data da Compra">
                             </div>
                             <input type="hidden" name="acao">
-                            <input type="hidden" name="id">
                             @csrf
                         </form>
                     </div>

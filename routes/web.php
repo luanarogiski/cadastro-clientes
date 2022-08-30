@@ -18,14 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', [UserController::class, 'index'])->name('home.index');
-Route::get('/', [Controller::class, 'acessar'])->name('user.login');
-Route::get('/login', [Controller::class, 'login'])->name('user.login');
-//Route::any('/user', [UserController::class, 'user'])->name('user.login');
-//Route::any('/user/login', [UserController::class, 'login'])->name('user.login');
-Route::any('/user/register', [UserController::class, 'register'])->name('user.register');
-Route::any('/user/password', [UserController::class, 'password'])->name('user.password');
-Route::any('/client/clientes', [ClientController::class, 'clientes'])->name('client.clientes');
+Route::get('/', [UserController::class, 'login'])->name('user.login');
+Route::get('/login', [UserController::class, 'login'])->name('user.login');
+Route::any('/register', [UserController::class, 'register'])->name('user.register');
+Route::any('/password', [UserController::class, 'password'])->name('user.password');
 
+Route::any('/client/clientes', [ClientController::class, 'clientes'])->name('client.clientes');
 Route::any('/client/listar', [ClientController::class, 'listar'])->name('client.listar');
 Route::any('/client/editar/{id}', [ClientController::class, 'editar'])->name('client.editar');
 Route::any('/client/adicionar', [ClientController::class, 'adicionar'])->name('client.adicionar');
