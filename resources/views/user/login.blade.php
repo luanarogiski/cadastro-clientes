@@ -8,6 +8,7 @@
         <meta name="author" content="" />
         <title>Login - SB Admin</title>
         <link href="/assets/css/styles.css" rel="stylesheet" />
+        <link href="/assets/css/custom.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="bg-primary">
@@ -26,8 +27,10 @@
                                             <label for="inputEmail">Email</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputPassword" type="password" placeholder="Senha" />
-                                            <label for="inputPassword">Senha</label>
+                                            <input class="form-control" type="password" id="inputLoginPassword" placeholder="Senha" />
+                                            <label for="inputLoginPassword">Senha</label>
+                                            <i id="verSenhaLogin" class="fas fa-eye text-primary-red" onclick="verSenhaLogin()"></i>
+                                            <i id="ocultarSenhaLogin" class="fas fa-eye-slash" onclick="verSenhaLogin()" style="display: none"></i>
                                         </div>
                                         <div class="form-check mb-3">
                                             <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
@@ -66,5 +69,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/assets/js/scripts.js"></script>
+    <script src="/assets/js/user/login.js"></script>
     </body>
     </html>

@@ -9,6 +9,22 @@
     align-content: space-around;
 }
 
+#verSenhaLogin, #ocultarSenhaLogin, #verSenha, #ocultarSenha, #verConfirmSenha, #ocultarConfirmSenha {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#verSenhaLogin, #verSenha, #verConfirmSenha {
+    color: red; !important;
+}
+
+#ocultarSenhaLogin, #ocultarSenha, #ocultarConfirmSenha {
+    color: green;
+
+}
+
 
 
 

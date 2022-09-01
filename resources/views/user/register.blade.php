@@ -65,14 +65,16 @@
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPassword" type="password" placeholder="Criar Senha" />
                                                     <label for="inputPassword">Senha</label>
-                                                    <i id="verSenha" class="fas fa-eye text-primary"></i>
+                                                    <i id="verSenha" class="fas fa-eye text-primary-red" onclick="verSenha()"></i>
+                                                    <i id="ocultarSenha" class="fas fa-eye-slash" onclick="verSenha()" style="display: none"></i>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPasswordConfirm" type="password" placeholder="Confirmar Senha" />
                                                     <label for="inputPasswordConfirm" >Confirmação da Senha</label>
-                                                    <i id="verConfirmSenha" class="fas fa-eye text-primary"></i>
+                                                    <i id="verConfirmSenha" class="fas fa-eye text-primary-red" onclick="verConfirmSenha()"></i>
+                                                    <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>
                                                 </div>
                                             </div>
                                         </div>
