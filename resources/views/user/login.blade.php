@@ -43,7 +43,7 @@
                                     </form>
                                 </div>
                                 <div class="card-footer text-center py-3">
-                                    <a class="btn btn-secondary" href="{{route('user.register')}}">Cadastre-se</a>
+                                    <a class="btn btn-secondary" onclick="cadastrar()" href="/register">Cadastre-se</a>
                                    <!-- <div class="small"><a href="register.html">Cadastre-se</a></div> -->
                                 </div>
                             </div>

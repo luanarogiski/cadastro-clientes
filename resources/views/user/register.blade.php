@@ -26,13 +26,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputFirstName" type="text" placeholder="Nome" />
-                                                    <label for="inputFirstName">Nome</label>
+                                                    <label id="labelInputFirstName" for="inputFirstName">Nome</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
                                                     <input class="form-control" id="inputLastName" type="text" placeholder="Sobrenome" />
-                                                    <label for="inputLastName">Sobrenome</label>
+                                                    <label id="labelInputLastName" for="inputLastName">Sobrenome</label>
                                                 </div>
                                             </div>
                                             {{--
@@ -57,14 +57,14 @@
                                             --}}
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" type="email" placeholder="nome@examplo.com" />
-                                            <label for="inputEmail">Email</label>
+                                            <input class="form-control" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" />
+                                            <label id="labelInputEmail" for="inputEmail">Email</label>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPassword" type="password" placeholder="Criar Senha" />
-                                                    <label for="inputPassword">Senha</label>
+                                                    <label id="labelInputPassword" for="inputPassword">Senha</label>
                                                     <i id="verSenha" class="fas fa-eye text-primary-red" onclick="verSenha()"></i>
                                                     <i id="ocultarSenha" class="fas fa-eye-slash" onclick="verSenha()" style="display: none"></i>
                                                 </div>
@@ -72,15 +72,17 @@
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPasswordConfirm" type="password" placeholder="Confirmar Senha" />
-                                                    <label for="inputPasswordConfirm" >Confirmação da Senha</label>
+                                                    <label id="labelInputPasswordConfirm" for="inputPasswordConfirm" >Confirmação da Senha</label>
                                                     <i id="verConfirmSenha" class="fas fa-eye text-primary-red" onclick="verConfirmSenha()"></i>
                                                     <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mt-4 mb-0">
-                                            <div class="d-grid"><a class="btn btn-primary btn-block" href="/login">Criar Conta</a></div>
+                                            <div class="d-grid"><a class="btn btn-primary btn-block" href="" onclick="criarConta()">Criar Conta</a></div>
                                         </div>
+                                        <div id="msgError"></div>
+                                        <div id="msgSuccess"></div>
                                     </form>
                                 </div>
                                 {{--
