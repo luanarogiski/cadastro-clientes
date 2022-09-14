@@ -10,6 +10,10 @@
         <link href="/assets/css/styles.css" rel="stylesheet" />
         <link href="/assets/css/custom.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     </head>
     <body class="bg-primary">
     <div id="layoutAuthentication">
@@ -81,8 +85,15 @@
                                         <div class="mt-4 mb-0">
                                             <div class="d-grid"><a class="btn btn-primary btn-block" href="" onclick="criarConta()">Criar Conta</a></div>
                                         </div>
-                                        <div id="msgError"></div>
-                                        <div id="msgSuccess"></div>
+                                        <div class="demo">
+                                        <div id="msgError">
+                                            <p>Preencha todos os campos corretamente antes de cadastrar</p>
+                                        </div>
+                                        <div id="msgSuccess">
+                                            <p>Cadastrando Usuário...</p>
+                                        </div>
+
+                                        </div>
                                     </form>
                                 </div>
                                 {{--
@@ -112,7 +123,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/scripts.js"></script>
+    <script src="{{"/assets/js/scripts.js"}}"></script>
     <script src="{{"/assets/js/user/register.js"}}"></script>
     </body>
     </html>

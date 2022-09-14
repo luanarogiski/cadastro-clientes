@@ -17,6 +17,12 @@ class UserController extends Controller
         return view('user.register');
     }
 
+    public function criarConta()
+    {
+        return view('user.register.criarConta');
+    }
+
+
     public function login()
     {
         return view('user.login');

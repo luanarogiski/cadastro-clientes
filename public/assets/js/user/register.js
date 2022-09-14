@@ -130,22 +130,55 @@
         }
     }
 
-    // BOTÃO CADASTRAR
+    // BOTÃO CRIAR CONTA DO USUÁRIO
     function criarConta() {
-        if(valid === true){
-            msgSuccess.setAttribute('style', 'display: block')
-            msgSuccess.innerHTML = '<strong>Cadastrando Usuário...</strong>'
-            msgError.setAttribute('style', 'display: none')
-            msgError.innerHTML = ''
-
-            setTimeout(() => {
-                window.local.href = './login.js';
-            }, 6000)
-
+        if(valid === true) {
+            $( function() {
+                $( "#msgSuccess" ).dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            } );
         } else {
-            msgError.setAttribute('style', 'display: block')
-            msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
-            msgSuccess.innerHTML = ''
-            msgSuccess.setAttribute('style', 'display: none')
+            $( function() {
+                $( "#msgError" ).dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            } );
         }
     }
+
+
+
+
+    /*
+    function criarConta() {
+        if(valid === true){
+           // msgSuccess.setAttribute('style', 'display: block')
+          //  msgSuccess.innerHTML = '<strong>Cadastrando Usuário...</strong>'
+          //  msgError.setAttribute('style', 'display: none')
+           // msgError.innerHTML = ''
+        alert('Cadastrando Usuário...')
+
+    setTimeout(() => {
+        window.local.href = '../login/login.js';
+    }, 6000)
+
+    } else {
+        //  msgError.setAttribute('style', 'display: block')
+        alert('Preencha todos os campos corretamente antes de cadastrar')
+        //  msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
+        // msgSuccess.innerHTML = ''
+        // msgSuccess.setAttribute('style', 'display: none')
+    }
+    }
+     */
