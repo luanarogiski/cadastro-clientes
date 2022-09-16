@@ -14,8 +14,8 @@
     let inputPasswordConfirm = document.querySelector('#inputPasswordConfirm')
     let labelInputPasswordConfirm = document.querySelector('#labelInputPasswordConfirm')
 
-    let msgError = document.querySelector('#msgError')
-    let msgSuccess = document.querySelector('#msgSuccess')
+    //let msgError = document.querySelector('#msgError')
+    //let msgSuccess = document.querySelector('#msgSuccess')
 
     let valid = false
 
@@ -65,6 +65,7 @@
         }
     })
 
+    // VALIDAÇÃO DE EMAIL COM O REGEX
     function validacaoEmail(inputEmail) {
         let pattern = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[_a-z0-9-]+(\.[_a-z0-9-]+)*(\.[a-z]{3})$/
         return pattern.test(inputEmail)
@@ -161,26 +162,6 @@
 
 
 
-    /*
-    function criarConta() {
-        if(valid === true){
-           // msgSuccess.setAttribute('style', 'display: block')
-          //  msgSuccess.innerHTML = '<strong>Cadastrando Usuário...</strong>'
-          //  msgError.setAttribute('style', 'display: none')
-           // msgError.innerHTML = ''
-        alert('Cadastrando Usuário...')
 
-    setTimeout(() => {
-        window.local.href = '../login/login.js';
-    }, 6000)
 
-    } else {
-        //  msgError.setAttribute('style', 'display: block')
-        alert('Preencha todos os campos corretamente antes de cadastrar')
-        //  msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
-        // msgSuccess.innerHTML = ''
-        // msgSuccess.setAttribute('style', 'display: none')
-    }
-    } <span className="material-symbols-outlined">close</span>
-     */
 
