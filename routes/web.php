@@ -21,7 +21,6 @@ Route::get('/home', [UserController::class, 'index'])->name('home.index');
 Route::get('/', [UserController::class, 'login'])->name('user.login');
 Route::get('/login', [UserController::class, 'login'])->name('user.login');
 Route::any('/register', [UserController::class, 'register'])->name('user.register');
-Route::any('/register/criarConta', [UserController::class, 'criarConta'])->name('user.register.criarConta');
 Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('user.redefinirSenha');
 
 Route::any('/client/clientes', [ClientController::class, 'clientes'])->name('client.clientes');

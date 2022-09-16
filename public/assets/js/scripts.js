@@ -7,7 +7,7 @@
     // Scripts
     //
 
-
+   // $.extend(true, $.fn.DataTable.defaults, {
     $.extend(true, $.fn.DataTable.defaults, {
         language: {
             "paginate": {

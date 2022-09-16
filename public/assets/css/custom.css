@@ -26,13 +26,7 @@
 }
 
 .demo {
-    padding:12px;
-    font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
-    clear:left;
-    font-size:12px;
-    font-weight:normal;
-    /*padding:0 0 1em;*/
-    margin:0;
+    text-align: center;
 }
 
 #msgError {
@@ -40,6 +34,7 @@
     color: #ff0000;
     background-color: #ffbbbb;
     padding: 10px;
+    margin-top: 8px;
     border-radius: 6px;
     display: none;
 }
@@ -49,10 +44,10 @@
     color: #00bb00;
     background-color: #bbffbe;
     padding: 10px;
+    margin-top: 8px;
     border-radius: 6px;
     display: none;
 }
-
 
 
 

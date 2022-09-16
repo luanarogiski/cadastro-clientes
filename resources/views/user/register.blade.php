@@ -11,8 +11,13 @@
         <link href="/assets/css/custom.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
+       {{-- JQUERY-UI --}}
+        {{--<link rel="stylesheet" href="/resources/demos/style.css">--}}
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
 
     </head>
     <body class="bg-primary">
@@ -29,13 +34,13 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Nome" />
+                                                    <input class="form-control" name="nome" id="inputFirstName" type="text" placeholder="Nome" />
                                                     <label id="labelInputFirstName" for="inputFirstName">Nome</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="Sobrenome" />
+                                                    <input class="form-control" name="sobrenome" id="inputLastName" type="text" placeholder="Sobrenome" />
                                                     <label id="labelInputLastName" for="inputLastName">Sobrenome</label>
                                                 </div>
                                             </div>
@@ -61,13 +66,13 @@
                                             --}}
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" />
+                                            <input class="form-control" name="email" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" />
                                             <label id="labelInputEmail" for="inputEmail">Email</label>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputPassword" type="password" placeholder="Criar Senha" />
+                                                    <input class="form-control" name="senha" id="inputPassword" type="password" placeholder="Criar Senha" />
                                                     <label id="labelInputPassword" for="inputPassword">Senha</label>
                                                     <i id="verSenha" class="fas fa-eye text-primary-red" onclick="verSenha()"></i>
                                                     <i id="ocultarSenha" class="fas fa-eye-slash" onclick="verSenha()" style="display: none"></i>
@@ -75,7 +80,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputPasswordConfirm" type="password" placeholder="Confirmar Senha" />
+                                                    <input class="form-control" name="confirmSenha" id="inputPasswordConfirm" type="password" placeholder="Confirmar Senha" />
                                                     <label id="labelInputPasswordConfirm" for="inputPasswordConfirm" >Confirmação da Senha</label>
                                                     <i id="verConfirmSenha" class="fas fa-eye text-primary-red" onclick="verConfirmSenha()"></i>
                                                     <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>
@@ -83,13 +88,13 @@
                                             </div>
                                         </div>
                                         <div class="mt-4 mb-0">
-                                            <div class="d-grid"><a class="btn btn-primary btn-block" href="" onclick="criarConta()">Criar Conta</a></div>
+                                            <div class="d-grid"><a class="btn btn-primary btn-block" href="#" onclick="criarConta(); return false">Criar Conta</a></div>
                                         </div>
                                         <div class="demo">
-                                        <div id="msgError">
+                                        <div id="msgError" title="Criar Conta">
                                             <p>Preencha todos os campos corretamente antes de cadastrar</p>
                                         </div>
-                                        <div id="msgSuccess">
+                                        <div id="msgSuccess" title="Criar Conta">
                                             <p>Cadastrando Usuário...</p>
                                         </div>
 

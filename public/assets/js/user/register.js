@@ -138,7 +138,7 @@
                     modal: true,
                     buttons: {
                         Ok: function() {
-                            $( this ).dialog( "close" );
+                            $( this ).dialog("close" );
                         }
                     }
                 });
@@ -155,6 +155,7 @@
                 });
             } );
         }
+
     }
 
 
@@ -180,5 +181,6 @@
         // msgSuccess.innerHTML = ''
         // msgSuccess.setAttribute('style', 'display: none')
     }
-    }
+    } <span className="material-symbols-outlined">close</span>
      */
+
