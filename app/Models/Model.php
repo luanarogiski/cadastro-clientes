@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class Model extends \Illuminate\Database\Eloquent\Model
 {
     protected $modifiers = [];
+    public $timestamps = false;
 
     public static function paginar(Request $request)
     {

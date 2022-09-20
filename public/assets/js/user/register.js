@@ -133,7 +133,7 @@
 
     // BOTÃO CRIAR CONTA DO USUÁRIO
     function criarConta() {
-        if(valid === true) {
+        if(valid) {
             $( function() {
                 $( "#msgSuccess" ).dialog({
                     modal: true,

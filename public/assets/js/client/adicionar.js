@@ -9,7 +9,7 @@
     function criarModalAdicionar() {
         // $('#formAdicionar')[0].reset();
         $('#btnCancelar, #btnFechar').unbind('click').click(function () {
-            modalAdicionar.hide();
+            $('#modalAdicionar').modal('hide');
         });
 
 
@@ -29,7 +29,7 @@
                     $('#modalAdicionar').load('/client/adicionar #modalAdicionar > div');
                 }
             });
-            modalAdicionar.hide();
+            $('#modalAdicionar').modal('hide');
         });
 
     }

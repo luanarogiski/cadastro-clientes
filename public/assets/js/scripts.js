@@ -7,8 +7,12 @@
     // Scripts
     //
 
-   // $.extend(true, $.fn.DataTable.defaults, {
-    $.extend(true, $.fn.DataTable.defaults, {
+    (function($) {
+        "use strict"; // Start of use strict
+
+    })(jQuery); // End of use strict
+
+   $.extend(true, $.fn.DataTable.defaults, {
         language: {
             "paginate": {
                 "previous": "Anterior",

@@ -10,7 +10,7 @@
     function criarModalEditar() {
         // $('#formEditar')[0].reset();
         $('#btnCancelar, #btnFechar').unbind('click').click(function () {
-            modalEditar.hide();
+            $('#modalEditar').modal('hide');
         });
 
 

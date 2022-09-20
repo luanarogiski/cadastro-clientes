@@ -8,6 +8,6 @@
 
     function criarModalVisualizar() {
         $('#btnCancelar, #btnFechar').unbind('click').click(function () {
-            modalVisualizar.hide();
+            $('#modalVisualizar').modal('hide');
         });
     }
