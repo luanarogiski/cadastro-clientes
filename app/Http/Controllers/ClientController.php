@@ -13,7 +13,7 @@
                 Clientes::paginar($request);
             }
 
-            return view('client.index');
+            return view('clientes.index');
         }
 
         public function listar(Request $request)
@@ -42,7 +42,7 @@
 
             $cliente = Clientes::where('id', $id)->first();
 
-            return view('client.editar', ['cliente' => $cliente]);
+            return view('clientes.editar', ['cliente' => $cliente]);
         }
 
         public function adicionar(Request $request)
@@ -65,7 +65,7 @@
                 return;
             }
 
-            return view('client.adicionar');
+            return view('clientes.adicionar');
         }
 
 
@@ -88,6 +88,6 @@
 
             $cliente = Clientes::where('id', $id)->first();
 
-            return view('client.visualizar', ['cliente' => $cliente]);
+            return view('clientes.visualizar', ['cliente' => $cliente]);
         }
     }

@@ -1,8 +1,8 @@
 @include('layout.header')
 
-@include('client.clientes')
+@include('clientes.index')
 
 
-@include('client.sidenavTables')
+@include('clientes.sidenavTables')
 
 @include('layout.footer')

@@ -60,7 +60,7 @@
                             Charts
                         </a>
                         --}}
-                        <a class="nav-link" href="{{route('client.clientes')}}">
+                        <a class="nav-link" href="{{route('clientes.index')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tables
                         </a>

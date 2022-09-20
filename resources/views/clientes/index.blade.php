@@ -1,6 +1,6 @@
     @include('layout.header')
 
-    @include('client.sidenavTables')
+    @include('clientes.sidenavTables')
 
     <div id="layoutSidenav_content">
         <main>
@@ -42,10 +42,10 @@
                 </div>
             </div>
         </main>
-        <script src="{{"/assets/js/client/index.js"}}"></script>
-        <script src="{{"/assets/js/client/adicionar.js"}}"></script>
-        <script src="{{"/assets/js/client/editar.js"}}"></script>
-        <script src="{{"/assets/js/client/visualizar.js"}}"></script>
+        <script src="{{"/assets/js/clientes/index.js"}}"></script>
+        <script src="{{"/assets/js/clientes/adicionar.js"}}"></script>
+        <script src="{{"/assets/js/clientes/editar.js"}}"></script>
+        <script src="{{"/assets/js/clientes/visualizar.js"}}"></script>
 
 
 

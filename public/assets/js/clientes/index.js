@@ -3,7 +3,7 @@
     $(document).ready(function () {
             datatable = $('#dataTable').DataTable({
                 ajax: {
-                    url: '/client/listar',
+                    url: '/clientes/listar',
                     type: 'POST',
                     data: {
                         acao: 'listar',

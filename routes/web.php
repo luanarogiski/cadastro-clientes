@@ -23,8 +23,8 @@ Route::get('/login', [UserController::class, 'login'])->name('user.login');
 Route::any('/register', [UserController::class, 'register'])->name('user.register');
 Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('user.redefinirSenha');
 
-Route::any('/client/clientes', [ClientController::class, 'clientes'])->name('client.clientes');
-Route::any('/client/listar', [ClientController::class, 'listar'])->name('client.listar');
-Route::any('/client/editar/{id}', [ClientController::class, 'editar'])->name('client.editar');
-Route::any('/client/adicionar', [ClientController::class, 'adicionar'])->name('client.adicionar');
-Route::any('/client/visualizar/{id}', [ClientController::class, 'visualizar'])->name('client.visualizar');
+Route::any('/clientes', [ClientController::class, 'index'])->name('clientes.index');
+Route::any('/clientes/listar', [ClientController::class, 'listar'])->name('client.listar');
+Route::any('/clientes/editar/{id}', [ClientController::class, 'editar'])->name('client.editar');
+Route::any('/clientes/adicionar', [ClientController::class, 'adicionar'])->name('client.adicionar');
+Route::any('/clientes/visualizar/{id}', [ClientController::class, 'visualizar'])->name('client.visualizar');

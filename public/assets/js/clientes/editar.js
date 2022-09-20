@@ -1,7 +1,7 @@
 
 
     function editar(id) {
-        $('#modalArea').load('/client/editar/' + id, function() {
+        $('#modalArea').load('/clientes/editar/' + id, function() {
             $('#modalEditar').modal('toggle');
             criarModalEditar();
         });
@@ -17,7 +17,7 @@
         $('#btnSalvar').unbind('click').click(function () {
             $.ajax({
                 type: 'POST',
-                url: '/client/editar/' + document.querySelector('#formEditar input[name=id]').value,
+                url: '/clientes/editar/' + document.querySelector('#formEditar input[name=id]').value,
                 data: new FormData(document.querySelector('#formEditar')),
                 processData: false,
                 contentType: false,

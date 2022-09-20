@@ -1,6 +1,6 @@
 
     function visualizar(id) {
-        $('#modalArea').load('/client/visualizar/' + id, function() {
+        $('#modalArea').load('/clientes/visualizar/' + id, function() {
             $('#modalVisualizar').modal('toggle');
         });
         criarModalVisualizar();

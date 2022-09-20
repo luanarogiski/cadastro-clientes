@@ -1,6 +1,6 @@
 
     function adicionar() {
-        $('#modalArea').load('/client/adicionar', function() {
+        $('#modalArea').load('/clientes/adicionar', function() {
             $('#modalAdicionar').modal('toggle');
             criarModalAdicionar();
         });
@@ -16,7 +16,7 @@
         $('#btnSalvar').unbind('click').click(function () {
             $.ajax({
                 type: 'POST',
-                url: '/client/adicionar',
+                url: '/clientes/adicionar',
                 data: new FormData(document.querySelector('#formAdicionar')),
                 processData: false,
                 contentType: false,
@@ -26,7 +26,7 @@
 
                     // Apos salvar recarregar o Grid
                     datatable.draw();
-                    $('#modalAdicionar').load('/client/adicionar #modalAdicionar > div');
+                    $('#modalAdicionar').load('/clientes/adicionar #modalAdicionar > div');
                 }
             });
             $('#modalAdicionar').modal('hide');
