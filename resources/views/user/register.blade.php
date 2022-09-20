@@ -88,7 +88,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-4 mb-0">
-                                            <div class="d-grid"><a class="btn btn-primary btn-block" href="#" onclick="criarConta(); return false">Criar Conta</a></div>
+                                            <div class="d-grid"><a id="btnCriarConta" class="btn btn-primary btn-block" href="#" onclick="criarConta(); return false">Criar Conta</a></div>
                                         </div>
                                         <div class="demo">
                                         <div id="msgError" title="Criar Conta">

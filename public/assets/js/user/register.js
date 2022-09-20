@@ -14,6 +14,8 @@
     let inputPasswordConfirm = document.querySelector('#inputPasswordConfirm')
     let labelInputPasswordConfirm = document.querySelector('#labelInputPasswordConfirm')
 
+    let btnCriarConta = document.querySelector('#btnCriarConta')
+
     //let msgError = document.querySelector('#msgError')
     //let msgSuccess = document.querySelector('#msgSuccess')
 
@@ -133,33 +135,32 @@
 
     // BOTÃO CRIAR CONTA DO USUÁRIO
     function criarConta() {
-        if(valid) {
-            $( function() {
-                $( "#msgSuccess" ).dialog({
-                    modal: true,
-                    buttons: {
-                        Ok: function() {
-                            $( this ).dialog("close" );
+        btnCriarConta.addEventListener('click', () => {
+            if (valid) {
+                $(function () {
+                    $("#msgSuccess").dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
                         }
-                    }
+                    });
                 });
-            } );
-        } else {
-            $( function() {
-                $( "#msgError" ).dialog({
-                    modal: true,
-                    buttons: {
-                        Ok: function() {
-                            $( this ).dialog( "close" );
+            } else {
+                $(function () {
+                    $("#msgError").dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
                         }
-                    }
+                    });
                 });
-            } );
-        }
-
+            }
+        })
     }
-
-
 
 
 
