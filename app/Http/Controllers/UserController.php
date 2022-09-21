@@ -1,41 +1,25 @@
 <?php
 
-namespace App\Http\Controllers;
+    namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+    use Illuminate\Http\Request;
 
-class UserController extends Controller
-{
-
-    public function index()
-    {
-        return view('home.index');
-    }
-
-    public function register()
-    {
-        return view('user.register');
-    }
-
-    public function criarConta()
-    {
-        return view('user.register.criarConta');
-    }
-
-
-    public function login()
-    {
-        return view('user.login');
-    }
-
-    public function redefinirSenha()
-    {
-        return view('user.redefinirSenha');
-    }
-
-    public function clientes()
+    class UserController extends Controller
     {
 
-        return view('client.clientes');
+        public function register()
+        {
+            return view('user.register');
+        }
+
+        public function login()
+        {
+            return view('user.login');
+        }
+
+        public function redefinirSenha()
+        {
+            return view('user.redefinirSenha');
+        }
+
     }
-}

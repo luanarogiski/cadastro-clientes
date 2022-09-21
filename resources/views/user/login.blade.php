@@ -37,7 +37,7 @@
                                             <label class="form-check-label" for="inputRememberPassword">Lembrar-me da Senha</label>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="{{route('user.redefinirSenha')}}">Esqueceu a Senha?</a>
+                                            <a class="small" href="/redefinirSenha">Esqueceu a Senha?</a>
                                             <a class="btn btn-primary" href="/home">Entrar</a>
                                         </div>
                                     </form>

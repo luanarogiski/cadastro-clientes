@@ -13,9 +13,9 @@ class Controller extends BaseController
 
 
 
-    public function acessar()
+    public function index()
     {
-        return view('user.login');
+        return view('home.index');
     }
 
 

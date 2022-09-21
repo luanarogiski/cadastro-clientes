@@ -137,16 +137,7 @@
     function criarConta() {
         btnCriarConta.addEventListener('click', () => {
             if (valid) {
-                $(function () {
-                    $("#msgSuccess").dialog({
-                        modal: true,
-                        buttons: {
-                            Ok: function () {
-                                $(this).dialog("close");
-                            }
-                        }
-                    });
-                });
+                registrarNovaConta();
             } else {
                 $(function () {
                     $("#msgError").dialog({
@@ -162,6 +153,40 @@
         })
     }
 
+    function registrarNovaConta()
+    {
+        var dados = new FormData(document.getElementById('formUsuario'));
+
+        $.ajax({
+            url: '/register',
+            type: "POST",
+            data: dados,
+            processData: false,
+            cache: false,
+            contentType: false,
+            success: function( data ) {
+                $("#msgSuccess").dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            },
+            error: function (request, status, error) {
+                $("#msgError > p").text('Erro ao enviar os dados ao servidor');
+                $("#msgError").dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            }
+        });
+    }
 
 
 
