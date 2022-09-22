@@ -1,7 +1,6 @@
 
-
     $(document).ready(function () {
-            datatable = $('#dataTable').DataTable({
+         datatable = $('#dataTable').DataTable({
                 ajax: {
                     url: '/clientes/listar',
                     type: 'POST',
@@ -15,20 +14,20 @@
                 columns: [
                     {data: 'id', visible: false},
                     {data: 'nome', width: '10%'},
-                    {data: 'dataNascimento', width: '10%'},
-                    {data: 'cpf', width: '10%'},
-                    {data: 'profissao', width: '10%'},
-                    {data: 'telefone', width: '10%'},
-                    {data: 'cidade', width: '5%'},
-                    {data: 'endereco', width: '10%'},
+                    {data: 'dataNascimento', width: '5%'},
+                    {data: 'cpf', width: '7%'},
+                    {data: 'profissao', width: '13%'},
+                    {data: 'telefone', width: '5%'},
+                    {data: 'cidade', width: '7%'},
+                    {data: 'endereco', width: '17%'},
                     {data: 'dataCadastro', width: '10%'},
                     {data: 'dataCompra', width: '10%'},
-                    {data: 'acoes', width: '10%'},
+                    {data: 'acoes', width: '16%'},
                 ],
 
                 columnDefs: [{
                     targets: -1, // ultima coluna
-                    orderable: false, // nao é ordenavel
+                    orderable: true, // nao é ordenavel,
                     render: function (data, type, cliente, meta) { // definir a forma de renderizacao
                         return `\
                                             <a href="#" class="btn btn-sm mr-1" onclick="visualizar(${cliente.id})" title="Visualizar" data-id="${cliente.id}">\
@@ -49,7 +48,7 @@
                 responsive: true,
                 searching: true,
                 seachDelay: 1000,
-                order: [[9, 'desc']],
+                order: [[1, 'asc']],
             });
 
         });

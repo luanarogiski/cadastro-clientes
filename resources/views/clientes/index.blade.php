@@ -21,23 +21,27 @@
                         Tabela de Cadastro de Clientes
                     </div>
                     <div class="card-body">
-                        <table id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nome</th>
-                                <th>Data de Nascimento</th>
-                                <th>CPF</th>
-                                <th>Profissão</th>
-                                <th>Telefone</th>
-                                <th>Cidade</th>
-                                <th>Endereço</th>
-                                <th>Data do Cadastro</th>
-                                <th>Data de Compra</th>
-                                <th>Ações</th>
-                            </tr>
-                            </thead>
-                        </table>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="dataTable" class="table" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Data de Nascimento</th>
+                                        <th>CPF</th>
+                                        <th>Profissão</th>
+                                        <th>Telefone</th>
+                                        <th>Cidade</th>
+                                        <th>Endereço</th>
+                                        <th>Data do Cadastro</th>
+                                        <th>Data de Compra</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

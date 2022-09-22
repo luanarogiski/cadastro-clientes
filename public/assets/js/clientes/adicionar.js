@@ -1,4 +1,5 @@
 
+
     function adicionar() {
         $('#modalArea').load('/clientes/adicionar', function() {
             $('#modalAdicionar').modal('toggle');
@@ -33,4 +34,5 @@
         });
 
     }
+
 

@@ -155,7 +155,7 @@
 
     function registrarNovaConta()
     {
-        var dados = new FormData(document.getElementById('formUsuario'));
+        let dados = new FormData(document.getElementById('formUsuario'));
 
         $.ajax({
             url: '/register',
@@ -169,9 +169,11 @@
                     modal: true,
                     buttons: {
                         Ok: function () {
-                            $(this).dialog("close");
+                            if ($(this).dialog("close")) {
+                                window.location.href = '/login'
+                            }
                         }
-                    }
+                    },
                 });
             },
             error: function (request, status, error) {
