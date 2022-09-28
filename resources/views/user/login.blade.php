@@ -10,6 +10,7 @@
         <link href="/assets/css/styles.css" rel="stylesheet" />
         <link href="/assets/css/custom.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="{{"/assets/js/jquery/jquery.min.js"}}"></script>
     </head>
     <body class="bg-primary">
     <div id="layoutAuthentication">
@@ -21,14 +22,14 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Acessar</h3></div>
                                 <div class="card-body">
-                                    <form>
+                                    <form id="formLogin">
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" type="email" placeholder="nome@exemplo.com" />
-                                            <label for="inputEmail">Email</label>
+                                            <input class="form-control" name="email" id="inputLoginEmail" type="email" placeholder="nome@exemplo.com" />
+                                            <label id="labelLoginEmail" for="labelLoginEmail">Email</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" type="password" id="inputLoginPassword" placeholder="Senha" />
-                                            <label for="inputLoginPassword">Senha</label>
+                                            <input class="form-control" type="password" name="senha" id="inputLoginPassword" placeholder="Senha" />
+                                            <label id="labelLoginPassword" for="labelLoginPassword">Senha</label>
                                             <i id="verSenhaLogin" class="fas fa-eye text-primary-red" onclick="verSenhaLogin()"></i>
                                             <i id="ocultarSenhaLogin" class="fas fa-eye-slash" onclick="verSenhaLogin()" style="display: none"></i>
                                         </div>
@@ -38,12 +39,13 @@
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <a class="small" href="/redefinirSenha">Esqueceu a Senha?</a>
-                                            <a class="btn btn-primary" href="/clientes">Entrar</a>
+                                            <a id="btnEntrar" class="btn btn-primary" href="" onclick="entrar(); return false">Entrar</a>
                                         </div>
+                                        @csrf
                                     </form>
                                 </div>
                                 <div class="card-footer text-center py-3">
-                                    <a class="btn btn-secondary" onclick="cadastrar()" href="/register">Cadastre-se</a>
+                                    <a class="btn btn-secondary" href="/register">Cadastre-se</a>
                                    <!-- <div class="small"><a href="register.html">Cadastre-se</a></div> -->
                                 </div>
                             </div>

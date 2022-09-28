@@ -16,7 +16,7 @@
                 $user->nome = $request->input('nome');
                 $user->sobrenome = $request->input('sobrenome');
                 $user->email = $request->input('email');
-                $user->senha = $request->input('senha');
+                $user->senha = md5($request->input('senha'));
                 $user->confirmSenha = $request->input('confirmSenha');
                 $user->save();
 
@@ -26,8 +26,24 @@
             return view('user.register');
         }
 
-        public function login()
+        public function login(Request $request)
         {
+
+            if ($request->isMethod(Request::METHOD_POST)) {
+                $user = User::where('email', $request->input('email'))
+                    ->where('senha', md5($request->input('senha')))
+                    ->get();
+
+                if ($user) {
+                    ExibirMensagem::criar()
+                        ->showErro('Não é possível excluir, existem posts com essa categoria!');
+                } else {
+                    //nao encontrou
+                }
+
+                echo json_encode(['mensagem' => 'Usuário logado com sucesso']);
+                return;
+            }
             return view('user.login');
         }
 
