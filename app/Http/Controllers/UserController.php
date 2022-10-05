@@ -33,16 +33,20 @@
                 $user = User::where('email', $request->input('email'))
                     ->where('senha', md5($request->input('senha')))
                     ->get();
+                $valorDaSessao = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'nenhum valor encontrado';
+                //var_dump('VALOR SALVO NA SESSÃO: ' . $valorDaSessao);
+                if (sizeof($user) > 0) {
+                    $_SESSION['nome'] = 'valor';
 
-                if ($user) {
-                    ExibirMensagem::criar()
-                        ->showErro('Não é possível excluir, existem posts com essa categoria!');
+
+                    echo json_encode(['sucesso' => true, 'mensagem' => 'Usuário logado com sucesso']);
+                    return;
                 } else {
-                    //nao encontrou
+                    echo json_encode(['sucesso' => false, 'mensagem' => 'Usuário ou Senha incorreta']);
+                    return;
                 }
 
-                echo json_encode(['mensagem' => 'Usuário logado com sucesso']);
-                return;
+
             }
             return view('user.login');
         }

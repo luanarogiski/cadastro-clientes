@@ -13,6 +13,9 @@
                 Clientes::paginar($request);
             }
 
+            $valorDaSessao = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'nenhum valor encontrado';
+            var_dump('VALOR SALVO NA SESSÃO: ' . $valorDaSessao);
+
             return view('clientes.index');
         }
 
