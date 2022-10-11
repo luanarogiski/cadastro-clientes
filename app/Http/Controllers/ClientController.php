@@ -13,8 +13,13 @@
                 Clientes::paginar($request);
             }
 
-            $valorDaSessao = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'nenhum valor encontrado';
-            var_dump('VALOR SALVO NA SESSÃO: ' . $valorDaSessao);
+        /*    if (!isset($_SESSION['UsuarioLog'])) {
+                echo json_encode(['sucesso' => false, 'mensagem' => 'Usuário ou Senha incorreta']);
+                return;
+            } else {
+                echo json_encode(['sucesso' => true, 'mensagem' => 'Usuário logado com sucesso']);
+                return;
+            } */
 
             return view('clientes.index');
         }

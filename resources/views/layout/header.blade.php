@@ -57,7 +57,7 @@
                 <li><a class="dropdown-item" href="#!">Configurações</a></li>
                 <!--    <li><a class="dropdown-item" href="#!">Activity Log</a></li> -->
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="{{route('user.login')}}">Sair</a></li>
+                <li><a class="dropdown-item" href="{{route('user.logout')}}">Sair</a></li>
             </ul>
         </li>
     </ul>

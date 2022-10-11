@@ -34,13 +34,13 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" name="nome" id="inputFirstName" type="text" placeholder="Nome" />
+                                                    <input class="form-control" name="nome" id="inputFirstName" type="text" placeholder="Nome" required/>
                                                     <label id="labelInputFirstName" for="inputFirstName">Nome</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" name="sobrenome" id="inputLastName" type="text" placeholder="Sobrenome" />
+                                                    <input class="form-control" name="sobrenome" id="inputLastName" type="text" placeholder="Sobrenome" required/>
                                                     <label id="labelInputLastName" for="inputLastName">Sobrenome</label>
                                                 </div>
                                             </div>
@@ -66,13 +66,13 @@
                                             --}}
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" name="email" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" />
+                                            <input class="form-control" name="email" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" required/>
                                             <label id="labelInputEmail" for="inputEmail">Email</label>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" name="senha" id="inputPassword" type="password" placeholder="Criar Senha" />
+                                                    <input class="form-control" name="senha" id="inputPassword" type="password" placeholder="Criar Senha" required/>
                                                     <label id="labelInputPassword" for="inputPassword">Senha</label>
                                                     <i id="verSenha" class="fas fa-eye text-primary-red" onclick="verSenha()"></i>
                                                     <i id="ocultarSenha" class="fas fa-eye-slash" onclick="verSenha()" style="display: none"></i>
@@ -80,7 +80,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" name="confirmSenha" id="inputPasswordConfirm" type="password" placeholder="Confirmar Senha" />
+                                                    <input class="form-control" name="confirmSenha" id="inputPasswordConfirm" type="password" placeholder="Confirmar Senha" required/>
                                                     <label id="labelInputPasswordConfirm" for="inputPasswordConfirm" >Confirmação da Senha</label>
                                                     <i id="verConfirmSenha" class="fas fa-eye text-primary-red" onclick="verConfirmSenha()"></i>
                                                     <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>

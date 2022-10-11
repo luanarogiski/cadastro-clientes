@@ -22,19 +22,28 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Acessar</h3></div>
                                 <div class="card-body">
-                                    <form id="formLogin">
+                                    <form id="formLogin" method="post" action="{{route('user.auth')}}">
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" name="email" id="inputLoginEmail" type="email" placeholder="nome@exemplo.com" />
+                                            <input class="form-control" name="email" id="inputLoginEmail" type="email" placeholder="nome@exemplo.com" required/>
                                             <label id="labelLoginEmail" for="labelLoginEmail">Email</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" type="password" name="senha" id="inputLoginPassword" placeholder="Senha" />
+                                            <input class="form-control" type="password" name="senha" id="inputLoginPassword" placeholder="Senha" required/>
                                             <label id="labelLoginPassword" for="labelLoginPassword">Senha</label>
                                             <i id="verSenhaLogin" class="fas fa-eye text-primary-red" onclick="verSenhaLogin()"></i>
                                             <i id="ocultarSenhaLogin" class="fas fa-eye-slash" onclick="verSenhaLogin()" style="display: none"></i>
                                         </div>
                                         <div class="form-check mb-3">
-                                            <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                            <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" required/>
                                             <label class="form-check-label" for="inputRememberPassword">Lembrar-me da Senha</label>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">

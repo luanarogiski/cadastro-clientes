@@ -2,12 +2,14 @@
 
     namespace App\Http\Controllers;
 
+    use App\Autenticacao\Autenticacao;
     use App\Models\User;
     use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Auth;
 
     class UserController extends Controller
     {
-
+                // REGISTER
         public function register(Request $request)
         {
             if ($request->isMethod(Request::METHOD_POST)) {
@@ -17,7 +19,7 @@
                 $user->sobrenome = $request->input('sobrenome');
                 $user->email = $request->input('email');
                 $user->senha = md5($request->input('senha'));
-                $user->confirmSenha = $request->input('confirmSenha');
+                $user->confirmSenha = md5($request->input('confirmSenha'));
                 $user->save();
 
                 echo json_encode(['mensagem' => 'Usuário cadastrado com sucesso']);
@@ -26,31 +28,39 @@
             return view('user.register');
         }
 
+
+                // LOGIN
         public function login(Request $request)
         {
-
             if ($request->isMethod(Request::METHOD_POST)) {
                 $user = User::where('email', $request->input('email'))
-                    ->where('senha', md5($request->input('senha')))
-                    ->get();
-                $valorDaSessao = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'nenhum valor encontrado';
-                //var_dump('VALOR SALVO NA SESSÃO: ' . $valorDaSessao);
-                if (sizeof($user) > 0) {
-                    $_SESSION['nome'] = 'valor';
+                            ->where('senha', md5($request->input('senha')))
+                            ->first();
 
-
+                if ($user) {
+                    $request->session()->put('usuario', $user->id);
                     echo json_encode(['sucesso' => true, 'mensagem' => 'Usuário logado com sucesso']);
                     return;
                 } else {
-                    echo json_encode(['sucesso' => false, 'mensagem' => 'Usuário ou Senha incorreta']);
+                    $request->session()->pull('usuario');
+                    echo json_encode(['sucesso' => false, 'mensagem' => 'Usuario ou Senha incorreta']);
                     return;
                 }
-
-
             }
             return view('user.login');
         }
 
+
+            // LOGOUT
+        public function logout(Request $request)
+        {
+            $request->session()->pull('usuario');
+            redirect('/login')->send();
+        }
+
+
+
+        // REDEFINIÇÃO DE SENHA
         public function redefinirSenha()
         {
             return view('user.redefinirSenha');

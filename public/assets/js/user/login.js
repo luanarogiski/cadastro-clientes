@@ -23,7 +23,6 @@
     }
 
     function entrar() {
-        // btnEntrar.addEventListener('click', () => {
 
             $.ajax({
                 type: 'POST',
@@ -34,8 +33,9 @@
                 dataType: "json",
                 success: function (resposta) {
                     alert(resposta.mensagem);
+
                     if (resposta.sucesso) {
-                        // window.location.href = '/clientes';
+                         window.location.href = '/clientes';
                     } else {
                         document.getElementById('inputLoginPassword').value = '';
                     }
@@ -44,6 +44,5 @@
                     alert(request.responseText);
                 }
             });
-        // })
     }
 
