@@ -41,9 +41,10 @@ class Controller extends BaseController
    }
 
 
+
     public function callAction($method, $parameters)
     {
-        if (is_object($parameters[0]) && $parameters[0] instanceof Request) {
+        if (isset($parameters[0]) && is_object($parameters[0]) && $parameters[0] instanceof Request) {
             $request = $parameters[0];
             if (substr($request->route()->getName(), 0,5) != 'user.') {
                 $this->checkLogin($request); // Valida se esta logado

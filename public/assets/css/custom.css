@@ -9,6 +9,13 @@
     align-content: space-around;
 }
 
+
+
+#btnFechar {
+    padding-bottom: 0;
+    margin: 0;
+}
+
 #verSenhaLogin, #ocultarSenhaLogin, #verSenha, #ocultarSenha, #verConfirmSenha, #ocultarConfirmSenha {
     position: absolute;
     top: 22px;

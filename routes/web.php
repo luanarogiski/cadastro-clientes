@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ConfController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,8 @@ Route::any('/login', [UserController::class, 'login'])->name('user.login');
 Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 Route::any('/register', [UserController::class, 'register'])->name('user.register');
 Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('user.redefinirSenha');
+
+Route::any('/configuracoes', [ConfController::class, 'configuracoes'])->name('conf.configuracoes');
 
 Route::any('/clientes', [ClientController::class, 'index'])->name('clientes.index');
 Route::any('/clientes/listar', [ClientController::class, 'listar'])->name('clientes.listar');

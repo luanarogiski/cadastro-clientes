@@ -55,16 +55,4 @@
     @include('layout.footer')
 
 
-    <!--    <script>
-        /*    function adicionar() {
-                $('#modalArea').load('/adicionar', function() {
-                    $('#modalAdicionar').modal('toggle');
-                });
-            }
 
-            function editar(id) {
-                $('#modalArea').load('/editar/' + id, function() {
-                    $('#modalEditar').modal('toggle');
-                });
-            }*/
-        </script> -->

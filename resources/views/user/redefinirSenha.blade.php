@@ -23,12 +23,12 @@
                                 <div class="small mb-3 text-muted">Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha.</div>
                                 <form>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email" placeholder="nome@exemplo.com" />
+                                        <input class="form-control" name="email" id="inputEmail" type="email" placeholder="nome@exemplo.com" />
                                         <label for="inputEmail">Email</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                     <!--    <a class="small" href="login.html">Retornar a Tela de Login</a> -->
-                                        <a class="btn btn-primary" href="{{route('user.login')}}">Redefinir Senha</a>
+                                        <a class="btn btn-primary" href="{{route('user.redefinirSenha')}}">Redefinir Senha</a>
                                     </div>
                                 </form>
                             </div>

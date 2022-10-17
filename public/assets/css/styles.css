@@ -5556,6 +5556,7 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
+  margin-top: -17px;
 }
 
 .modal-backdrop {
@@ -5575,7 +5576,7 @@ textarea.form-control-lg {
 }
 
 .modal-header {
-  display: flex;
+  display: -webkit-box;
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
@@ -5583,6 +5584,7 @@ textarea.form-control-lg {
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
+  margin-bottom: -5px;
 }
 .modal-header .btn-close {
   padding: 0.5rem 0.5rem;
@@ -5592,6 +5594,7 @@ textarea.form-control-lg {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  padding-right: 40rem;
 }
 
 .modal-body {

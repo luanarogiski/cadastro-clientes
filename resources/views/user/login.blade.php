@@ -22,16 +22,7 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Acessar</h3></div>
                                 <div class="card-body">
-                                    <form id="formLogin" method="post" action="{{route('user.auth')}}">
-                                        @if ($errors->any())
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                        @endif
+                                    <form id="formLogin" method="post">
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="email" id="inputLoginEmail" type="email" placeholder="nome@exemplo.com" required/>
                                             <label id="labelLoginEmail" for="labelLoginEmail">Email</label>
