@@ -45,7 +45,7 @@
                                     </form>
                                 </div>
                                 <div class="card-footer text-center py-3">
-                                    <a class="btn btn-secondary" href="/register">Cadastre-se</a>
+                                    <a class="btn btn-secondary" href="/admin">Cadastre-se</a>
                                    <!-- <div class="small"><a href="register.html">Cadastre-se</a></div> -->
                                 </div>
                             </div>
@@ -72,5 +72,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/user/login.js"></script>
+    <script src="/assets/js/admin/register.js"></script>
     </body>
     </html>

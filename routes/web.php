@@ -22,10 +22,10 @@ use Illuminate\Support\Facades\Route;
 Route::any('/', [UserController::class, 'login'])->name('user.login');
 Route::any('/login', [UserController::class, 'login'])->name('user.login');
 Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
-Route::any('/register', [UserController::class, 'register'])->name('user.register');
 Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('user.redefinirSenha');
-Route::any('/criarNovaSenha', [UserController::class, 'criarNovaSenha'])->name('user.criarNovaSenha');
 
+Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
 
 Route::any('/configuracoes', [ConfController::class, 'configuracoes'])->name('conf.configuracoes');
 

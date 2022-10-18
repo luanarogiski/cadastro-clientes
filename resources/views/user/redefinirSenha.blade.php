@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                     <!--    <a class="small" href="login.html">Retornar a Tela de Login</a> -->
-                                        <a class="btn btn-primary" href="" onclick="redefinirSenha(); return false">Redefinir Senha</a>
+                                        <a class="btn btn-primary" href="">Redefinir Senha</a>
                                     </div>
                                 </form>
                             </div>
@@ -60,6 +60,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/assets/js/scripts.js"></script>
-    <script src="{{"/assets/js/user/register.js"}}"></script>
     </body>
     </html>

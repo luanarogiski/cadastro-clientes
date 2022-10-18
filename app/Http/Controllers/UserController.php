@@ -9,26 +9,6 @@
 
     class UserController extends Controller
     {
-                // REGISTER
-        public function register(Request $request)
-        {
-            if ($request->isMethod(Request::METHOD_POST)) {
-                //cadastro user
-                $user = new User();
-                $user->nome = $request->input('nome');
-                $user->sobrenome = $request->input('sobrenome');
-                $user->email = $request->input('email');
-                $user->senha = md5($request->input('senha'));
-                $user->confirmSenha = md5($request->input('confirmSenha'));
-                $user->save();
-
-                echo json_encode(['mensagem' => 'Usuário cadastrado com sucesso']);
-                return;
-            }
-            return view('user.register');
-        }
-
-
                 // LOGIN
         public function login(Request $request)
         {
@@ -73,11 +53,5 @@
             return view('user.redefinirSenha');
         }
 
-
-        // CRIAR A NOVA SENHA DE RECUPERAÇÃO
-        public function criarNovaSenha()
-        {
-            return view('user.criarNovaSenha');
-        }
 
     }
