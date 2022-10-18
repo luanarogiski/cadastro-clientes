@@ -9,23 +9,14 @@
     {
         public function index(Request $request)
         {
-            if ($request->isMethod(Request::METHOD_POST)) {
-                Clientes::paginar($request);
-            }
-
-        /*    if (!isset($_SESSION['UsuarioLog'])) {
-                echo json_encode(['sucesso' => false, 'mensagem' => 'Usuário ou Senha incorreta']);
-                return;
-            } else {
-                echo json_encode(['sucesso' => true, 'mensagem' => 'Usuário logado com sucesso']);
-                return;
-            } */
 
             return view('clientes.index');
         }
 
         public function listar(Request $request)
         {
+            $request['filters'] = ['users_id'];
+            $request['users_id'] = $this->getUsuarioLogado($request);
             Clientes::paginar($request);
         }
 
@@ -67,11 +58,14 @@
                 $cliente->endereco = $request->input('endereco');
                 $cliente->dataCadastro = $request->input('dataCadastro');
                 $cliente->dataCompra = $request->input('dataCompra');
+                $cliente->users_id = $this->getUsuarioLogado($request);
+//                $cliente->users_id = $this->usuario->id;
                 $cliente->save();
 
                 echo json_encode(['mensagem' => 'Cliente cadastrado com sucesso']);
                 return;
             }
+
 
             return view('clientes.adicionar');
         }

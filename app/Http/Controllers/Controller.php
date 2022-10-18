@@ -16,6 +16,11 @@ class Controller extends BaseController
    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     /**
+     * @var User recebe o usuario logado
+     */
+   protected $usuario;
+
+    /**
      * Se existir sessao para o usuario, retorna o id
      * @param Request $request
      * @return null
@@ -37,7 +42,8 @@ class Controller extends BaseController
        if (!$this->getUsuarioLogado($request)) {
            redirect('/login')->send();
        }
-       View::share('usuario', User::where('id', $this->getUsuarioLogado($request))->first());
+       $this->usuario = User::where('id', $this->getUsuarioLogado($request))->first();
+       View::share('usuario', $this->usuario);
    }
 
 

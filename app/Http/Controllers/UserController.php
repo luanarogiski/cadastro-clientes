@@ -59,11 +59,25 @@
         }
 
 
-
         // REDEFINIÇÃO DE SENHA
-        public function redefinirSenha()
+        public function redefinirSenha(Request $request)
         {
+            if ($request->isMethod(Request::METHOD_POST)) {
+                $user = User::where('email', $request->input('email'))
+                    ->first();
+
+                if ($user) {
+                    $request->session()->put('email', $user->id);
+                }
+            }
             return view('user.redefinirSenha');
+        }
+
+
+        // CRIAR A NOVA SENHA DE RECUPERAÇÃO
+        public function criarNovaSenha()
+        {
+            return view('user.criarNovaSenha');
         }
 
     }

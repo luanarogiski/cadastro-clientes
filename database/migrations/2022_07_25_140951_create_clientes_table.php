@@ -15,6 +15,8 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->integer('id', true, true);
+            $table->integer('users_id', false, true);
+            $table->foreign('users_id')->references('id')->on('users');
             $table->string('nome');
             $table->date('dataNascimento');
             $table->string('cpf');
