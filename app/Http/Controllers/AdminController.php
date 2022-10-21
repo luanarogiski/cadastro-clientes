@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -9,11 +11,55 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
             // ADMIN
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.index');
+        if ($request->isMethod(Request::METHOD_POST)) {
+            $admin = Admin::where('email', $request->input('email'))
+                ->where('senha', md5($request->input('senha')))
+                ->first();
+
+            if ($admin) {
+                $request->session()->put('admin', $admin->id);
+                echo json_encode(['sucesso' => true, 'mensagem' => 'Administrador Logado']);
+                return;
+            } else {
+                $request->session()->pull('admin');
+                echo json_encode(['sucesso' => false, 'mensagem' => 'Digite os Dados do Administrador']);
+                return;
+            }
+            return view('admin.index');
+        }
+
+
+
+
+
+        /*
+        $this->checkLogin($request);
+
+        if ($request->isMethod(Request::METHOD_POST)) {
+            if (empty($request->input('email')) || empty($request->input('senha'))) {
+                return redirect()->route('admin.index', ['error' => 1]);
+            }
+
+            if (Admin::login($request)) {
+                return redirect()->route('admin.index');
+            }
+
+            return redirect()->route('admin.index', ['error' => 1]);
+        }
+
+        return view('admin.index', ['error' => $request->input('error')]);
+        */
     }
 
+
+
+            // PAINEL
+    public function painel()
+    {
+        return view('admin.painel');
+    }
 
 
 

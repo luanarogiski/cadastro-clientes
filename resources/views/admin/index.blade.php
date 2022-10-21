@@ -20,7 +20,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Acessar</h3></div>
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Acesso do Administrador</h3></div>
                             <div class="card-body">
                                 <form id="formLogin" method="post">
                                     <div class="form-floating mb-3">
@@ -44,10 +44,11 @@
                                     @csrf
                                 </form>
                             </div>
-                            <div class="card-footer text-center py-3">
+                        <!--    <div class="card-footer text-center py-3">
                                 <a class="btn btn-secondary" href="/register">Cadastre-se</a>
-                                <!-- <div class="small"><a href="register.html">Cadastre-se</a></div> -->
+                                 <div class="small"><a href="register.html">Cadastre-se</a></div>
                             </div>
+                        -->
                         </div>
                     </div>
                 </div>
@@ -71,7 +72,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="/assets/js/scripts.js"></script>
-<script src="/assets/js/user/login.js"></script>
+<script src="/assets/js/admin/index.js"></script>
 <script src="/assets/js/admin/register.js"></script>
 </body>
 </html>
