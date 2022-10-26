@@ -26,7 +26,7 @@ class CreateAdminsTable extends Migration
             [
                 'name' => 'Admin',
                 'email' => 'admin@mail.com',
-                'senha' => md5('admin')
+                'senha' => md5('admin1')
             ],
             [
                 'name' => 'Manutenção',

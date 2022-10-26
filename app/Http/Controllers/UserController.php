@@ -3,6 +3,7 @@
     namespace App\Http\Controllers;
 
     use App\Autenticacao\Autenticacao;
+    use App\Models\Admin;
     use App\Models\User;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Auth;
@@ -14,8 +15,8 @@
         {
             if ($request->isMethod(Request::METHOD_POST)) {
                 $user = User::where('email', $request->input('email'))
-                            ->where('senha', md5($request->input('senha')))
-                            ->first();
+                    ->where('senha', md5($request->input('senha')))
+                    ->first();
 
                 if ($user) {
                     $request->session()->put('usuario', $user->id);

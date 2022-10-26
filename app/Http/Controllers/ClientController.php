@@ -9,10 +9,10 @@
     {
         public function index(Request $request)
         {
-
             return view('clientes.index');
         }
 
+                // LISTAR
         public function listar(Request $request)
         {
             $request['filters'] = ['users_id'];
@@ -20,9 +20,10 @@
             Clientes::paginar($request);
         }
 
+
         public function editar(Request $request, $id)
         {
-            //editar
+                    // EDITAR
             if ($request->isMethod('POST')) {
                 $cliente = Clientes::where('id', $request->input('id'))->first();
 
@@ -44,6 +45,8 @@
             return view('clientes.editar', ['cliente' => $cliente]);
         }
 
+
+                // ADICIONAR
         public function adicionar(Request $request)
         {
             if ($request->isMethod(Request::METHOD_POST)) {
@@ -71,6 +74,7 @@
         }
 
 
+                // VISUALIZAR
         public function visualizar(Request $request, $id)
         {
             if ($request->isMethod('POST')) {
