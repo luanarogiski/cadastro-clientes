@@ -46,5 +46,30 @@
         });
     }
 
+    /*
+    function cadastrar() {
 
+        $.ajax({
+            type: 'POST',
+            url: '/register',
+            data: new FormData(document.querySelector('#formUsuario')),
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function (resposta) {
+                alert(resposta.mensagem);
+
+                if (resposta.sucesso) {
+                    window.location.href = '/clientes';
+                } else {
+                    document.getElementById('inputLoginPassword').value = '';
+                }
+            },
+            error: function (request, status, error) {
+                alert(request.responseText);
+            }
+        });
+
+
+    } */
 

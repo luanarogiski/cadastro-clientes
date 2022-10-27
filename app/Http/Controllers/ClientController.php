@@ -15,8 +15,9 @@
                 // LISTAR
         public function listar(Request $request)
         {
-            $request['filters'] = ['users_id'];
+            $request['filters'] = ['users_id', 'admins_id'];
             $request['users_id'] = $this->getUsuarioLogado($request);
+            $request['admins_id'] = $this->getAdminLogado($request);
             Clientes::paginar($request);
         }
 
@@ -62,6 +63,7 @@
                 $cliente->dataCadastro = $request->input('dataCadastro');
                 $cliente->dataCompra = $request->input('dataCompra');
                 $cliente->users_id = $this->getUsuarioLogado($request);
+                $cliente->admins_id = $this->getAdminLogado($request);
 //                $cliente->users_id = $this->usuario->id;
                 $cliente->save();
 
