@@ -66,6 +66,7 @@ class Controller extends BaseController
             $request = $parameters[0];
             $rotasLiberadasSemLogin = [
                 'user.login',
+                'user.logout',
                 'admin.register'
             ];
 

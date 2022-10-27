@@ -15,6 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->integer('id', true, true);
+            $table->integer('admins_id', false, true);
+            $table->foreign('admins_id')->references('id')->on('admins');
             $table->string('nome', 220);
             $table->string('sobrenome', 220);
             $table->string('email', 70)->unique();;
