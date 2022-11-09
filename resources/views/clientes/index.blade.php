@@ -9,7 +9,7 @@
                 @if($usuario)
                      {{ $usuario->nome }}
                     @else
-                    {{Administrador}}
+                    {{'Administrador'}}
                 @endif
                 </h1>
                 <div class="adicionar">

@@ -22,6 +22,11 @@ class Controller extends BaseController
    protected $usuario;
 
     /**
+     * @var Admin recebe o admin logado
+     */
+   protected $admin;
+
+    /**
      * Se existir sessao para o usuario, retorna o id
      * @param Request $request
      * @return null
@@ -48,14 +53,18 @@ class Controller extends BaseController
      */
    protected function checkLogin(Request $request)
    {
-       if (!$this->getUsuarioLogado($request)) {
-           redirect('/login')->send();
-       } elseif (!$this->getAdminLogado($request)) {
+       // Se nem o usuário e nem o admin estiverem logados, redireciona pro login
+       if (!$this->getUsuarioLogado($request) && !$this->getAdminLogado($request)) {
            redirect('/login')->send();
        }
-       $this->usuario = User::where('id', $this->getUsuarioLogado($request))->first();
+
+       if ($this->getUsuarioLogado($request)) { // Se for o usuário que estiver logado, atribui o usuário
+           $this->usuario = User::where('id', $this->getUsuarioLogado($request))->first();
+       } else { // Se não, atribui o admin
+           $this->admin = Admin::where('id', $this->getAdminLogado($request))->first();
+       }
+
        View::share('usuario', $this->usuario);
-       $this->admin = Admin::where('id', $this->getAdminLogado($request))->first();
        View::share('admin', $this->admin);
    }
 
