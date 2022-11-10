@@ -33,9 +33,9 @@
                                         <th>Profissão</th>
                                         <th>Telefone</th>
                                         <th>Cidade</th>
+                                        <th>Estado</th>
                                         <th>Endereço</th>
                                         <th>Data do Cadastro</th>
-                                        <th>Data de Compra</th>
                                         <th>Ações</th>
                                     </tr>
                                     </thead>

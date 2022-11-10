@@ -37,6 +37,10 @@
                             <input type="text" name="cidade" class="form-control" placeholder="Cidade">
                         </div>
                         <div class="form-group">
+                            <label>Estado</label>
+                            <input type="text" name="estado" class="form-control" placeholder="Estado">
+                        </div>
+                        <div class="form-group">
                             <label>Endereço</label>
                             <input type="text" name="endereco" class="form-control" placeholder="Endereço">
                         </div>

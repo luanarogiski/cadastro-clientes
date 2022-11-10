@@ -14,14 +14,14 @@
                 columns: [
                     {data: 'id', visible: false},
                     {data: 'nome', width: '10%'},
-                    {data: 'dataNascimento', width: '5%'},
+                    {data: 'dataNascimento', width: '8%'},
                     {data: 'cpf', width: '7%'},
                     {data: 'profissao', width: '13%'},
                     {data: 'telefone', width: '5%'},
-                    {data: 'cidade', width: '7%'},
+                    {data: 'cidade', width: '10%'},
+                    {data: 'estado', width: '5%'},
                     {data: 'endereco', width: '17%'},
-                    {data: 'dataCadastro', width: '10%'},
-                    {data: 'dataCompra', width: '10%'},
+                    {data: 'dataCadastro', width: '7%'},
                     {data: 'acoes', width: '16%'},
                 ],
 

@@ -87,9 +87,10 @@
                 $cliente->profissao = $request->input('profissao');
                 $cliente->telefone = $request->input('telefone');
                 $cliente->cidade = $request->input('cidade');
+                $cliente->cidade = $request->input('estado');
                 $cliente->endereco = $request->input('endereco');
                 $cliente->dataCadastro = $request->input('dataCadastro');
-                $cliente->dataCompra = $request->input('dataCompra');
+                //$cliente->dataCompra = $request->input('dataCompra');
                 $cliente->save();
                 return;
             }

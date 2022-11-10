@@ -36,6 +36,10 @@
                         <input type="text" name="cidade" value="{{ $cliente->cidade }}" class="form-control" placeholder="Cidade">
                     </div>
                     <div class="form-group">
+                        <label>Estado</label>
+                        <input type="text" name="estado" value="{{ $cliente->estado }}" class="form-control" placeholder="Estado">
+                    </div>
+                    <div class="form-group">
                         <label>Endereço</label>
                         <input type="text" name="endereco" value="{{ $cliente->endereco }}" class="form-control" placeholder="Endereço">
                     </div>
