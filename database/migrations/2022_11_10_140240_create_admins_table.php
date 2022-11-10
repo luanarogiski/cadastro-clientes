@@ -15,7 +15,8 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->integer('id', true, true);
-            $table->string('name', 50);
+            $table->string('nome', 50);
+            $table->string('sobrenome', 100);
             $table->string('email', 60)->unique();;
             $table->timestamp('email_verified_at')->nullable();
             $table->string('senha', 120);
@@ -24,12 +25,14 @@ class CreateAdminsTable extends Migration
 
         \Illuminate\Support\Facades\DB::table('admins')->insert([
             [
-                'name' => 'Admin',
+                'nome' => 'Admin',
+                'sobrenome' => 'Admin',
                 'email' => 'admin@mail.com',
                 'senha' => md5('admin1')
             ],
             [
-                'name' => 'Manutenção',
+                'nome' => 'Manutenção',
+                'sobrenome' => 'Manutenção',
                 'email' => 'manutencao@email.com',
                 'senha' => md5('ekyKWKcwjNZGHq')
             ]

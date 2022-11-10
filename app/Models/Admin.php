@@ -12,7 +12,8 @@ class Admin extends Model
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'name',
+        'nome',
+        'sobrenome',
         'email',
         'senha',
     ];

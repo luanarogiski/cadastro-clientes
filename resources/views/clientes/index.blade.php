@@ -6,11 +6,6 @@
         <main>
             <div class="container-fluid px-4">
                 <h1 class="mt-2">Cadastrar Clientes - Seja bem-vindo
-                @if($usuario)
-                     {{ $usuario->nome }}
-                    @else
-                    {{'Administrador'}}
-                @endif
                 </h1>
                 <div class="adicionar">
                     <a href="#" onclick="adicionar()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Adicionar Novo Cliente <i class="fas fa-plus"></i></a>
