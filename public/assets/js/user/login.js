@@ -35,7 +35,7 @@
                 alert(resposta.mensagem);
 
                 if (resposta.sucesso) {
-                    window.location.href = '/clientes';
+                    window.location.href = '/admin';
                 } else {
                     document.getElementById('inputLoginPassword').value = '';
                 }

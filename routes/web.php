@@ -26,6 +26,7 @@ Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('
 
 //Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
+Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
 
 Route::any('/configuracoes', [ConfController::class, 'configuracoes'])->name('conf.configuracoes');
 

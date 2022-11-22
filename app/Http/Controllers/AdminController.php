@@ -11,6 +11,10 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
 
+    public function index() {
+        return view('admin.index');
+    }
+
             // REGISTER
     public function register(Request $request)
     {
@@ -29,5 +33,7 @@ class AdminController extends Controller
         }
         return view('admin.register');
     }
+
+
 
 }
