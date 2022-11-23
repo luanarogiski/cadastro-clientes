@@ -18,18 +18,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+            // USER
 Route::any('/', [UserController::class, 'login'])->name('user.login');
 Route::any('/login', [UserController::class, 'login'])->name('user.login');
 Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('user.redefinirSenha');
 
-//Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
-Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
+            // ADMIN
 Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
+Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
 
+            // CONFIGURAÇÕES
 Route::any('/configuracoes', [ConfController::class, 'configuracoes'])->name('conf.configuracoes');
 
+            // CLIENTES
 Route::any('/clientes', [ClientController::class, 'index'])->name('clientes.index');
 Route::any('/clientes/listar', [ClientController::class, 'listar'])->name('clientes.listar');
 Route::any('/clientes/editar/{id}', [ClientController::class, 'editar'])->name('clientes.editar');
