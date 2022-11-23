@@ -26,7 +26,7 @@ class AdminController extends Controller
             $admin->email = $request->input('email');
             $admin->senha = md5($request->input('senha'));
             $admin->confirmSenha = md5($request->input('confirmSenha'));
-            $admin->save();
+
 
             echo json_encode(['mensagem' => 'Administrador Cadastrado com Sucesso']);
             return;
@@ -35,5 +35,20 @@ class AdminController extends Controller
     }
 
 
+    public function user(Request $request) {
+        if ($request->isMethod(Request::METHOD_POST)) {
+            //cadastro user
+            $user = new User();
+            $user->nome = $request->input('nome');
+            $user->sobrenome = $request->input('sobrenome');
+            $user->email = $request->input('email');
+            $user->senha = md5($request->input('senha'));
+            $user->confirmSenha = md5($request->input('confirmSenha'));
 
+
+            echo json_encode(['mensagem' => 'Usuário Cadastrado com Sucesso']);
+            return;
+        }
+        return view('admin.register.user');
+    }
 }
