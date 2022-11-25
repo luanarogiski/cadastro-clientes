@@ -21,7 +21,7 @@
                     ->first();
                 if ($admin) { // Se encontrou o admin (senha está correta), então salva na sessão
                     $request->session()->put('admin', $admin->id);
-                    echo json_encode(['sucesso' => true, 'mensagem' => 'Admin logado com sucesso']);
+                    echo json_encode(['sucesso' => true, 'mensagem' => 'Admin logado com sucesso', 'admin' => true]);
                     return;
                 } else { // Se não encontrou o admin, então tenta procurar o usuário
                     $user = User::where('email', $request->input('email'))
@@ -29,7 +29,7 @@
                         ->first();
                     if ($user) { // Se encontrou o usuário (senha está correta), então salva na sessão
                         $request->session()->put('usuario', $user->id);
-                        echo json_encode(['sucesso' => true, 'mensagem' => 'Usuário logado com sucesso']);
+                        echo json_encode(['sucesso' => true, 'mensagem' => 'Usuário logado com sucesso', 'admin' => false]);
                         return;
                     }
                 }
