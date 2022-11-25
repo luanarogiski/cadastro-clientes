@@ -46,11 +46,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Data do Cadastro</label>
-                                <input type="date" name="dataCadastro" value="{{ $cliente->dataCadastro }}" class="form-control" placeholder="Data do Cadastro">
-                            </div>
-                            <div class="form-group">
-                                <label>Data da Compra</label>
-                                <input type="date" name="dataCompra" value="{{ $cliente->dataCompra }}" class="form-control" placeholder="Data da Compra">
+                                <input type="date" name="dataCadastro" value="{{ date('Y-m-d') }}" class="form-control" placeholder="Data do Cadastro">
                             </div>
                             <input type="hidden" name="acao">
                             @csrf

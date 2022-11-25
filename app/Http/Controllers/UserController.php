@@ -13,7 +13,6 @@
         // LOGIN
         public function login(Request $request)
         {
-
             if ($request->isMethod(Request::METHOD_POST)) {
                 // Primeiro procura o admin
                 $admin = Admin::where('email', $request->input('email'))
@@ -42,7 +41,6 @@
             }
             return view('user.login');
         }
-
 
 
             // LOGOUT

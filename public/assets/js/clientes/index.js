@@ -37,10 +37,10 @@
                                             <i class="fas fa-edit text-info"></i>\
                                             </a>\
                                             <!--
-                                            <a href="#" class="btn btn-sm mr-1" onclick="deletar(${cliente.id})" title="Deletar" data-id="${cliente.id}">\
+                                            <a href="#" class="btn btn-sm mr-1" onclick="deletar()" title="Deletar" data-id="">\
                                             <i class="fas fa-trash text-danger"></i>\
                                             -->
-                                    /`;
+                                    `;
                 },
             }],
 

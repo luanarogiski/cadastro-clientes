@@ -2,7 +2,8 @@
 <div class="modal fade" id="modalVisualizar" tabindex="-1" aria-labelledby="modalVisualizarLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">Visualizar</h5>
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalVisualizarTitle">Visualizar</h5>
                 <a href="#" id="btnFechar" class="text-secondary" data-bs-dismiss="modal"> <span class="material-symbols-outlined">close</span></a>
             </div>
             <div class="modal-body">
@@ -45,11 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label>Data do Cadastro</label>
-                        <input type="date" name="dataCadastro" value="{{ $cliente->dataCadastro }}" class="form-control" placeholder="Data do Cadastro">
-                    </div>
-                    <div class="form-group">
-                        <label>Data da Compra</label>
-                        <input type="date" name="dataCompra" value="{{ $cliente->dataCompra }}" class="form-control" placeholder="Data da Compra">
+                        <input type="date" name="dataCadastro" value="{{ date('Y-m-d') }}" class="form-control" placeholder="Data do Cadastro">
                     </div>
                     <input type="hidden" name="acao">
                     <input type="hidden" name="id">

@@ -1,11 +1,11 @@
     @include('layout.header')
 
-    @include('clientes.sidenavTables')
+    @include('layout.sidenavTables')
 
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-2">Cadastrar Clientes - Seja bem-vindo
+                <h1 class="mt-2">Cadastrar Clientes - Seja bem-vindo {{ $usuario->nome }}
                 </h1>
                 <div class="adicionar">
                     <a href="#" onclick="adicionar()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Adicionar Novo Cliente <i class="fas fa-plus"></i></a>

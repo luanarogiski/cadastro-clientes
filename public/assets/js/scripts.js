@@ -7,7 +7,7 @@
     // Scripts
     //
 
-    $.fn.DataTable = undefined;
+    //$.fn.DataTable = undefined;
     $.extend(true, $.fn.DataTable, {
         language: {
             "paginate": {

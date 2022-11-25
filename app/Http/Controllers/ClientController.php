@@ -34,13 +34,12 @@
                 $cliente->profissao = $request->input('profissao');
                 $cliente->telefone = $request->input('telefone');
                 $cliente->cidade = $request->input('cidade');
+                $cliente->estado = $request->input('estado');
                 $cliente->endereco = $request->input('endereco');
                 $cliente->dataCadastro = $request->input('dataCadastro');
-                $cliente->dataCompra = $request->input('dataCompra');
                 $cliente->save();
                 return('Cliente alterado com sucesso');
             }
-
             $cliente = Clientes::where('id', $id)->first();
 
             return view('clientes.editar', ['cliente' => $cliente]);
@@ -59,19 +58,17 @@
                 $cliente->profissao = $request->input('profissao');
                 $cliente->telefone = $request->input('telefone');
                 $cliente->cidade = $request->input('cidade');
+                $cliente->estado = $request->input('estado');
                 $cliente->endereco = $request->input('endereco');
-                $cliente->dataCadastro = $request->input('dataCadastro');
-                $cliente->dataCompra = $request->input('dataCompra');
+                $cliente->dataCadastro = $request->date('dataCadastro');
                 $cliente->users_id = $this->getUsuarioLogado($request);
-                $cliente->admins_id = $this->getAdminLogado($request);
+            //    $cliente->admins_id = $this->getAdminLogado($request);
 //                $cliente->users_id = $this->usuario->id;
                 $cliente->save();
 
                 echo json_encode(['mensagem' => 'Cliente cadastrado com sucesso']);
                 return;
             }
-
-
             return view('clientes.adicionar');
         }
 
@@ -87,14 +84,12 @@
                 $cliente->profissao = $request->input('profissao');
                 $cliente->telefone = $request->input('telefone');
                 $cliente->cidade = $request->input('cidade');
-                $cliente->cidade = $request->input('estado');
+                $cliente->estado = $request->input('estado');
                 $cliente->endereco = $request->input('endereco');
                 $cliente->dataCadastro = $request->input('dataCadastro');
-                //$cliente->dataCompra = $request->input('dataCompra');
                 $cliente->save();
                 return;
             }
-
             $cliente = Clientes::where('id', $id)->first();
 
             return view('clientes.visualizar', ['cliente' => $cliente]);

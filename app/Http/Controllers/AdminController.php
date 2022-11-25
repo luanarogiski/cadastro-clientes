@@ -15,10 +15,6 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-//    public function login() {
-//        return view('admin.index');
-//    }
-
             // REGISTER
     public function register(Request $request)
     {
@@ -38,7 +34,7 @@ class AdminController extends Controller
         return view('admin.register');
     }
 
-
+            // REGISTER USER
     public function user(Request $request) {
         if ($request->isMethod(Request::METHOD_POST)) {
             //cadastro user
