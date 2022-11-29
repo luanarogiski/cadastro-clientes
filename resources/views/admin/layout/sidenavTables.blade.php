@@ -24,7 +24,7 @@
                     <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="login.html">Login</a>
+                                    <a class="nav-link" href="login.html">Acessar Usuários</a>
                                     <a class="nav-link" href="/register/user">Register</a>
                                     <a class="nav-link" href="password.html">Forgot Password</a>
                                 </nav>
@@ -34,7 +34,7 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                         Charts
                     </a>
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="/clientes">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Tables
                     </a>

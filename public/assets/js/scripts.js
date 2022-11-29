@@ -7,8 +7,9 @@
     // Scripts
     //
 
+
     //$.fn.DataTable = undefined;
-    $.extend(true, $.fn.DataTable, {
+    $.extend(true, $.fn.DataTable.defaults, {
         language: {
             "paginate": {
                 "previous": "Anterior",
