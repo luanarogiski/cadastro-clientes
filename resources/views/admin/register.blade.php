@@ -44,48 +44,26 @@
                                                     <label id="labelInputLastName" for="inputLastName">Sobrenome</label>
                                                 </div>
                                             </div>
+                                            {{--
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" name="dataNascimento" id="inputDataNascimento" type="text" placeholder="Data de Nascimento" required/>
-                                                    <label id="labelInputDataNascimento" for="inputDataNascimento">Data de Nascimento</label>
+                                                    <input class="form-control" id="inputRg" type="text" placeholder="RG" />
+                                                    <label for="inputRg">RG</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" name="rg" id="inputRG" type="text" placeholder="RG" required/>
-                                                    <label id="labelInputRG" for="inputRG">RG</label>
+                                                    <input class="form-control" id="inputCpf" type="text" placeholder="CPF" />
+                                                    <label for="inputCpf">CPF</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" name="cpf" id="inputCPF" type="text" placeholder="CPF" required/>
-                                                    <label id="labelInputCPF" for="inputCPF">CPF</label>
+                                                    <input class="form-control" id="inputContato" type="text" placeholder="Número de Telefone" />
+                                                    <label for="inputContato">Telefone</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-floating">
-                                                    <input class="form-control" name="telefone" id="inputTelefone" type="text" placeholder="Telefone" required/>
-                                                    <label id="labelInputTelefone" for="inputTelefone">Telefone</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-floating">
-                                                    <input class="form-control" name="cidade" id="inputCidade" type="text" placeholder="Cidade" required/>
-                                                    <label id="labelInputCidade" for="inputCidade">Cidade</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-floating">
-                                                    <input class="form-control" name="estado" id="inputEstado" type="text" placeholder="Estado" required/>
-                                                    <label id="labelInputEstado" for="inputEstado">Estado</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-floating">
-                                                    <input class="form-control" name="endereco" id="inputEndereco" type="text" placeholder="Endereço" required/>
-                                                    <label id="labelInputEndereco" for="inputEndereco">Endereço</label>
-                                                </div>
-                                            </div>
+                                            --}}
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="email" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" required/>
@@ -106,12 +84,6 @@
                                                     <label id="labelInputPasswordConfirm" for="inputPasswordConfirm" >Confirmação da Senha</label>
                                                     <i id="verConfirmSenha" class="fas fa-eye text-primary-red" onclick="verConfirmSenha()"></i>
                                                     <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-floating">
-                                                    <input class="form-control" name="dataCadastro" id="inputDataCadastro" type="date" placeholder="Data de Cadastro" value="{{date('Y-m-d')}}" required/>
-                                                    <label id="labelInputDataCadastro" for="inputDataCadastro">Data do Cadastro</label>
                                                 </div>
                                             </div>
                                         </div>

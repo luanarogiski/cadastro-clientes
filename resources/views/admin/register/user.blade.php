@@ -44,26 +44,48 @@
                                                 <label id="labelInputLastName" for="inputLastName">Sobrenome</label>
                                             </div>
                                         </div>
-                                        {{--
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputRg" type="text" placeholder="RG" />
-                                                <label for="inputRg">RG</label>
+                                                <input class="form-control" name="dataNascimento" id="inputDataNascimento" type="text" placeholder="Data de Nascimento" required/>
+                                                <label id="labelInputDataNascimento" for="inputDataNascimento">Data de Nascimento</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputCpf" type="text" placeholder="CPF" />
-                                                <label for="inputCpf">CPF</label>
+                                                <input class="form-control" name="rg" id="inputRG" type="text" placeholder="RG" required/>
+                                                <label id="labelInputRG" for="inputRG">RG</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputContato" type="text" placeholder="Número de Telefone" />
-                                                <label for="inputContato">Telefone</label>
+                                                <input class="form-control" name="cpf" id="inputCPF" type="text" placeholder="CPF" required/>
+                                                <label id="labelInputCPF" for="inputCPF">CPF</label>
                                             </div>
                                         </div>
-                                        --}}
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="telefone" id="inputTelefone" type="text" placeholder="Telefone" required/>
+                                                <label id="labelInputTelefone" for="inputTelefone">Telefone</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="cidade" id="inputCidade" type="text" placeholder="Cidade" required/>
+                                                <label id="labelInputCidade" for="inputCidade">Cidade</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="estado" id="inputEstado" type="text" placeholder="Estado" required/>
+                                                <label id="labelInputEstado" for="inputEstado">Estado</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="endereco" id="inputEndereco" type="text" placeholder="Endereço" required/>
+                                                <label id="labelInputEndereco" for="inputEndereco">Endereço</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input class="form-control" name="email" id="inputEmail" type="email" placeholder="nome@examplo.com" onkeydown="validacaoEmail()" required/>
@@ -86,6 +108,12 @@
                                                 <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>
                                             </div>
                                         </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="dataCadastro" id="inputDataCadastro" type="date" placeholder="Data de Cadastro" value="{{date('Y-m-d')}}" required/>
+                                                <label id="labelInputDataCadastro" for="inputDataCadastro">Data do Cadastro</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="mt-4 mb-0">
                                         <div class="d-grid"><a id="btnCriarConta" class="btn btn-primary btn-block" href="#" onclick="criarConta(); return false">Criar Conta</a></div>
@@ -102,6 +130,11 @@
                                     @csrf
                                 </form>
                             </div>
+                            {{--
+                            <div class="card-footer text-center py-3">
+                                <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                            </div>
+                            --}}
                         </div>
                     </div>
                 </div>
@@ -126,8 +159,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="{{"/assets/js/scripts.js"}}"></script>
 <script src="{{"/assets/js/user/login.js"}}"></script>
-<script src="{{"/assets/js/admin/register/user.js"}}"></script>
-
+<script src="{{"/assets/js/clientes/index.js"}}"></script>
+<script src="{{"/assets/js/admin/register.js"}}"></script>
 
 </body>
 </html>
