@@ -29,6 +29,10 @@ Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
 //Route::any('/login', [AdminController::class, 'login'])->name('admin.index');
 Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
 Route::any('/register/user', [AdminController::class, 'user'])->name('admin.register.user');
+Route::any('/acessar/user', [AdminController::class, 'acessar'])->name('admin.acessar.user');
+Route::any('/users/listar', [AdminController::class, 'listar'])->name('users.listar');
+
+
 
             // CONFIGURAÇÕES
 Route::any('/configuracoes', [ConfController::class, 'configuracoes'])->name('conf.configuracoes');

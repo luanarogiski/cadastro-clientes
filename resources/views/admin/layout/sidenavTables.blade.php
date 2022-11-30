@@ -24,7 +24,7 @@
                     <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="login.html">Acessar Usuários</a>
+                                    <a class="nav-link" href="/acessar/user">Acessar Usuários</a>
                                     <a class="nav-link" href="/register/user">Register</a>
                                     <a class="nav-link" href="password.html">Forgot Password</a>
                                 </nav>

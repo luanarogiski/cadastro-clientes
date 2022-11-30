@@ -62,8 +62,7 @@
                 $cliente->endereco = $request->input('endereco');
                 $cliente->dataCadastro = $request->date('dataCadastro');
                 $cliente->users_id = $this->getUsuarioLogado($request);
-            //    $cliente->admins_id = $this->getAdminLogado($request);
-//                $cliente->users_id = $this->usuario->id;
+                $cliente->admins_id = $this->getAdminLogado($request);
                 $cliente->save();
 
                 echo json_encode(['mensagem' => 'Cliente cadastrado com sucesso']);

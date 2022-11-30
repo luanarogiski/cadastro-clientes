@@ -19,11 +19,18 @@ class CreateUsersTable extends Migration
             $table->foreign('admins_id')->references('id')->on('admins');
             $table->string('nome', 220);
             $table->string('sobrenome', 220);
+            $table->date('dataNascimento');
+            $table->string('rg', 20);
+            $table->string('cpf', 20);
+            $table->string('telefone', 20);
+            $table->string('cidade', 50);
+            $table->string('estado', 10);
+            $table->string('endereco', 100);
             $table->string('email', 70)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('senha', 32);
             $table->string('confirmSenha', 32);
-            $table->timestamps();
+            $table->dateTime('dataCadastro');
         });
     }
 
