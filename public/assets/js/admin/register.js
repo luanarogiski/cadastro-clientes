@@ -133,7 +133,7 @@
         }
     }
 
-    // BOTÃO CRIAR CONTA DO USUÁRIO
+    // BOTÃO CRIAR CONTA DO ADMIN
     function criarConta() {
         btnCriarConta.addEventListener('click', () => {
             if (valid) {

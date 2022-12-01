@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Admin;
+use App\Models\Clientes;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -67,4 +68,12 @@ class AdminController extends Controller
     {
         return view('admin.acessar.users');
     }
+
+    // LISTAR
+//    public function listar(Request $request)
+//    {
+//        $request['filters'] = ['users_id'];
+//        $request['users_id'] = $this->getUsuarioLogado($request);
+//        User::paginar($request);
+//    }
 }

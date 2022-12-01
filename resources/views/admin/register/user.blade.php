@@ -160,7 +160,7 @@
 <script src="{{"/assets/js/scripts.js"}}"></script>
 <script src="{{"/assets/js/user/login.js"}}"></script>
 <script src="{{"/assets/js/clientes/index.js"}}"></script>
-<script src="{{"/assets/js/admin/register.js"}}"></script>
+<script src="{{"/assets/js/admin/register/user.js"}}"></script>
 
 </body>
 </html>

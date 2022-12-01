@@ -5,6 +5,27 @@ let labelInputFirstName = document.querySelector('#labelInputFirstName')
 let inputLastName = document.querySelector('#inputLastName')
 let labelInputLastName = document.querySelector('#labelInputLastName')
 
+let inputDataNascimento = document.querySelector('#inputDataNascimento')
+let labelInputDataNascimento = document.querySelector('#labelInputDataNascimento')
+
+let inputRG = document.querySelector('#inputRG')
+let labelInputRG = document.querySelector('#labelInputRG')
+
+let inputCPF = document.querySelector('#inputCPF')
+let labelInputCPF = document.querySelector('#labelInputCPF')
+
+let inputTelefone = document.querySelector('#inputTelefone')
+let labelInputTelefone = document.querySelector('#labelInputTelefone')
+
+let inputCidade = document.querySelector('#inputCidade')
+let labelInputCidade = document.querySelector('#labelInputCidade')
+
+let inputEstado = document.querySelector('#inputEstado')
+let labelInputEstado = document.querySelector('#labelInputEstado')
+
+let inputEndereco = document.querySelector('#inputEndereco')
+let labelInputEndereco = document.querySelector('#labelInputEndereco')
+
 let inputEmail = document.querySelector('#inputEmail')
 let labelInputEmail = document.querySelector('#labelInputEmail');
 
@@ -13,6 +34,9 @@ let labelInputPassword = document.querySelector('#labelInputPassword')
 
 let inputPasswordConfirm = document.querySelector('#inputPasswordConfirm')
 let labelInputPasswordConfirm = document.querySelector('#labelInputPasswordConfirm')
+
+let inputDataCadastro = document.querySelector('#inputDataCadastro')
+let labelInputDataCadastro = document.querySelector('#labelInputDataCadastro')
 
 let btnCriarConta = document.querySelector('#btnCriarConta')
 
@@ -48,6 +72,111 @@ inputLastName.addEventListener('keyup', ()=> {
         labelInputLastName.setAttribute('style', 'color: green')
         labelInputLastName.innerHTML = 'Sobrenome'
         inputLastName.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// DATA NASCIMENTO
+inputDataNascimento.addEventListener('keyup', ()=> {
+    if(inputDataNascimento.value.length <= 7) {
+        labelInputDataNascimento.setAttribute('style', 'color: red')
+        labelInputDataNascimento.innerHTML = 'Data de Nascimento'
+        inputDataNascimento.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputDataNascimento.setAttribute('style', 'color: green')
+        labelInputDataNascimento.innerHTML = 'Data de Nascimento'
+        inputDataNascimento.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// RG
+inputRG.addEventListener('keyup', ()=> {
+    if(inputRG.value.length <= 8) {
+        labelInputRG.setAttribute('style', 'color: red')
+        labelInputRG.innerHTML = 'RG *Com mais de 8 dígitos'
+        inputRG.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputRG.setAttribute('style', 'color: green')
+        labelInputRG.innerHTML = 'RG'
+        inputRG.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// CPF
+inputCPF.addEventListener('keyup', ()=> {
+    if(inputCPF.value.length <= 10) {
+        labelInputCPF.setAttribute('style', 'color: red')
+        labelInputCPF.innerHTML = 'CPF *Com mais de 10 dígitos'
+        inputCPF.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputCPF.setAttribute('style', 'color: green')
+        labelInputCPF.innerHTML = 'CPF'
+        inputCPF.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// TELEFONE
+inputTelefone.addEventListener('keyup', ()=> {
+    if(inputTelefone.value.length <= 10) {
+        labelInputTelefone.setAttribute('style', 'color: red')
+        labelInputTelefone.innerHTML = 'Telefone *Com mais de 10 dígitos'
+        inputTelefone.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputTelefone.setAttribute('style', 'color: green')
+        labelInputTelefone.innerHTML = 'Telefone'
+        inputTelefone.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// CIDADE
+inputCidade.addEventListener('keyup', ()=> {
+    if(inputCidade.value.length <= 2) {
+        labelInputCidade.setAttribute('style', 'color: red')
+        labelInputCidade.innerHTML = 'Cidade *Com mais de 2 letras'
+        inputCidade.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputCidade.setAttribute('style', 'color: green')
+        labelInputCidade.innerHTML = 'Cidade'
+        inputCidade.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// ESTADO
+inputEstado.addEventListener('keyup', ()=> {
+    if(inputEstado.value.length <= 1) {
+        labelInputEstado.setAttribute('style', 'color: red')
+        labelInputEstado.innerHTML = 'Estado *Com mais de 1 letra'
+        inputEstado.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputEstado.setAttribute('style', 'color: green')
+        labelInputEstado.innerHTML = 'Estado'
+        inputEstado.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// ENDEREÇO
+inputEndereco.addEventListener('keyup', ()=> {
+    if(inputEndereco.value.length <= 5) {
+        labelInputEndereco.setAttribute('style', 'color: red')
+        labelInputEndereco.innerHTML = 'Endereço *Com mais de 5 letras'
+        inputEndereco.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputEndereco.setAttribute('style', 'color: green')
+        labelInputEndereco.innerHTML = 'Endereço'
+        inputEndereco.setAttribute('style', 'border-color: green')
         valid = true
     }
 })
@@ -99,6 +228,21 @@ inputPasswordConfirm.addEventListener('keyup', ()=> {
         labelInputPasswordConfirm.setAttribute('style', 'color: green')
         labelInputPasswordConfirm.innerHTML = 'Senha'
         inputPasswordConfirm.setAttribute('style', 'border-color: green')
+        valid = true
+    }
+})
+
+// DATA DE CADASTRO
+inputDataCadastro.addEventListener('keyup', ()=> {
+    if(inputDataCadastro.value.length < 7) {
+        labelInputDataCadastro.setAttribute('style', 'color: red')
+        labelInputDataCadastro.innerHTML = 'Data de Cadastro *Com mais de 5 dígitos'
+        inputDataCadastro.setAttribute('style', 'border-color: red')
+        valid = false
+    } else {
+        labelInputDataCadastro.setAttribute('style', 'color: green')
+        labelInputDataCadastro.innerHTML = 'Data de Cadastro'
+        inputDataCadastro.setAttribute('style', 'border-color: green')
         valid = true
     }
 })
