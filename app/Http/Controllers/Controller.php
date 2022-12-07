@@ -76,7 +76,7 @@ class Controller extends BaseController
             $rotasLiberadasSemLogin = [
                 'user.login',
                 'user.logout',
-                'admin.register'
+                'admin.register.admin'
             ];
 
             if (!in_array($request->route()->getName(), $rotasLiberadasSemLogin)) {

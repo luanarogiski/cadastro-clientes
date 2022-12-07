@@ -27,10 +27,10 @@ Route::any('/redefinirSenha', [UserController::class, 'redefinirSenha'])->name('
             // ADMIN
 Route::any('/admin', [AdminController::class, 'index'])->name('admin.index');
 //Route::any('/login', [AdminController::class, 'login'])->name('admin.index');
-Route::any('/register', [AdminController::class, 'register'])->name('admin.register');
+Route::any('/register', [AdminController::class, 'register'])->name('admin.register.admin');
 Route::any('/register/user', [AdminController::class, 'user'])->name('admin.register.user');
 Route::any('/acessar/user', [AdminController::class, 'acessar'])->name('admin.acessar.user');
-Route::any('/users/listar', [AdminController::class, 'listar'])->name('users.listar');
+Route::any('/users/listar', [AdminController::class, 'listar'])->name('admin.users.listar');
 
 
 

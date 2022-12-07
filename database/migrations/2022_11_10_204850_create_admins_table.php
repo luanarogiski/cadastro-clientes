@@ -21,7 +21,7 @@ class CreateAdminsTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('senha', 120);
             $table->string('confirmSenha', 120);
-            $table->timestamps();
+            $table->dateTime('dataCadastro');
         });
 
         \Illuminate\Support\Facades\DB::table('admins')->insert([

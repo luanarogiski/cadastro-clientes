@@ -28,12 +28,13 @@ class AdminController extends Controller
             $admin->email = $request->input('email');
             $admin->senha = md5($request->input('senha'));
             $admin->confirmSenha = md5($request->input('confirmSenha'));
+            $admin->dataCadastro = $request->input('dataCadastro');
             $admin->save();
 
             echo json_encode(['mensagem' => 'Administrador Cadastrado com Sucesso']);
             return;
         }
-        return view('admin.register');
+        return view('admin.register.admin');
     }
 
             // REGISTER USER

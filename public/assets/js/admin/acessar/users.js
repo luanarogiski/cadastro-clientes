@@ -22,6 +22,7 @@ $(document).ready(function () {
             {data: 'cidade', width: '10%'},
             {data: 'estado', width: '5%'},
             {data: 'endereco', width: '15%'},
+            {data: 'email', visible: false},
             {data: 'dataCadastro', width: '8%'},
             {data: 'acoes', width: '18%'},
         ],

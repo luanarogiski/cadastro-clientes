@@ -86,6 +86,12 @@
                                                     <i id="ocultarConfirmSenha" class="fas fa-eye-slash" onclick="verConfirmSenha()" style="display: none"></i>
                                                 </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating mb-3 mb-md-0">
+                                                    <input class="form-control" name="dataCadastro" id="inputDataCadastro" type="date" placeholder="Data de Cadastro" value="{{date('Y-m-d')}}" required/>
+                                                    <label id="labelInputDataCadastro" for="inputDataCadastro">Data do Cadastro</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="mt-4 mb-0">
                                             <div class="d-grid"><a id="btnCriarConta" class="btn btn-primary btn-block" href="#" onclick="criarConta(); return false">Criar Conta</a></div>
@@ -132,7 +138,7 @@
     <script src="{{"/assets/js/scripts.js"}}"></script>
     <script src="{{"/assets/js/user/login.js"}}"></script>
     <script src="{{"/assets/js/clientes/index.js"}}"></script>
-    <script src="{{"/assets/js/admin/register.js"}}"></script>
+    <script src="{{"/assets/js/admin/register/admin.js"}}"></script>
 
     </body>
     </html>
