@@ -20,6 +20,4 @@ class Clientes extends Model
         'endereco',
         'dataCadastro',
     ];
-
-
 }

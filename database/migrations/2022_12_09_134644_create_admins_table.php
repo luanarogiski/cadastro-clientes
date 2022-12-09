@@ -30,14 +30,16 @@ class CreateAdminsTable extends Migration
                 'sobrenome' => 'Admin',
                 'email' => 'admin@mail.com',
                 'senha' => md5('admin1'),
-                'confirmSenha' => md5('admin1')
+                'confirmSenha' => md5('admin1'),
+                'dataCadastro' => date('Y-m-d')
             ],
             [
                 'nome' => 'Manutenção',
                 'sobrenome' => 'Manutenção',
                 'email' => 'manutencao@email.com',
                 'senha' => md5('ekyKWKcwjNZGHq'),
-                'confirmSenha' => md5('ekyKWKcwjNZGHq')
+                'confirmSenha' => md5('ekyKWKcwjNZGHq'),
+                'dataCadastro' => date('Y-m-d')
             ]
         ]);
     }

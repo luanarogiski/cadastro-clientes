@@ -17,6 +17,7 @@ class Admin extends Model
         'email',
         'senha',
         'confirmSenha',
+        'dataCadastro',
     ];
 
     protected $hidden = [
