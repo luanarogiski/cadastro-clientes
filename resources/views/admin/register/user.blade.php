@@ -80,7 +80,7 @@
                                                 <label id="labelInputEstado" for="inputEstado">Estado</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="form-floating mb-3">
                                             <div class="form-floating">
                                                 <input class="form-control" name="endereco" id="inputEndereco" type="text" placeholder="Endereço" required/>
                                                 <label id="labelInputEndereco" for="inputEndereco">Endereço</label>

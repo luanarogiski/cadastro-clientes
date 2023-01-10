@@ -279,22 +279,20 @@ function verConfirmSenha() {
 
 // BOTÃO CRIAR CONTA DO USUÁRIO
 function criarConta() {
-    btnCriarConta.addEventListener('click', () => {
-        if (valid) {
-            registrarNovaConta();
-        } else {
-            $(function () {
-                $("#msgError").dialog({
-                    modal: true,
-                    buttons: {
-                        Ok: function () {
-                            $(this).dialog("close");
-                        }
+    if (valid) {
+        registrarNovaConta();
+    } else {
+        $(function () {
+            $("#msgError").dialog({
+                modal: true,
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
                     }
-                });
+                }
             });
-        }
-    })
+        });
+    }
 }
 
 function registrarNovaConta()
@@ -321,7 +319,12 @@ function registrarNovaConta()
             });
         },
         error: function (request, status, error) {
-            $("#msgError > p").text('Erro ao enviar os dados ao servidor');
+            console.log(request);
+            let msg = error;
+            if (typeof request.responseJSON.message != 'undefined') {
+                msg = request.responseJSON.message;
+            }
+            $("#msgError > p").text('Erro ao enviar os dados ao servidor: ' + msg);
             $("#msgError").dialog({
                 modal: true,
                 buttons: {

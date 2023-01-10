@@ -70,11 +70,4 @@ class AdminController extends Controller
         return view('admin.acessar.users');
     }
 
-    // LISTAR
-//    public function listar(Request $request)
-//    {
-//        $request['filters'] = ['users_id'];
-//        $request['users_id'] = $this->getUsuarioLogado($request);
-//        User::paginar($request);
-//    }
 }

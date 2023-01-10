@@ -135,22 +135,20 @@
 
     // BOTÃO CRIAR CONTA DO ADMIN
     function criarConta() {
-        btnCriarConta.addEventListener('click', () => {
-            if (valid) {
-                registrarNovaConta();
-            } else {
-                $(function () {
-                    $("#msgError").dialog({
-                        modal: true,
-                        buttons: {
-                            Ok: function () {
-                                $(this).dialog("close");
-                            }
+        if (valid) {
+            registrarNovaConta();
+        } else {
+            $(function () {
+                $("#msgError").dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
                         }
-                    });
+                    }
                 });
-            }
-        })
+            });
+        }
     }
 
     function registrarNovaConta()
